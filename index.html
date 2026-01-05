@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Die besten Webseiten zum Thema KI und AI Lernen - Eine kuratierte Liste der Top-Ressourcen">
+    <meta name="theme-color" content="#6366f1">
+    <title>AI Lernen - Die besten Webseiten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary-color: #8b5cf6;
+            --background: #0f172a;
+            --surface: #1e293b;
+            --surface-light: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --accent: #22d3ee;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 0 0 2rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-secondary);
+            opacity: 0.95;
+        }
+
+        .intro {
+            background: var(--surface);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        .intro p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .site-card {
+            background: var(--surface);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .site-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .site-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .site-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--surface-light);
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .site-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .site-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 0.5rem;
+        }
+
+        .site-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .site-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .site-link:hover::after {
+            transform: translateX(5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--surface);
+            margin-top: 3rem;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: var(--success);
+            color: white;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .sites-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 2rem 1rem 1.5rem;
+                border-radius: 0 0 1.5rem 1.5rem;
+            }
+
+            .container {
+                padding: 0.5rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .site-card {
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .site-card:nth-child(1) { animation-delay: 0.1s; }
+        .site-card:nth-child(2) { animation-delay: 0.2s; }
+        .site-card:nth-child(3) { animation-delay: 0.3s; }
+        .site-card:nth-child(4) { animation-delay: 0.4s; }
+        .site-card:nth-child(5) { animation-delay: 0.5s; }
+        .site-card:nth-child(6) { animation-delay: 0.6s; }
+        .site-card:nth-child(7) { animation-delay: 0.7s; }
+        .site-card:nth-child(8) { animation-delay: 0.8s; }
+        .site-card:nth-child(9) { animation-delay: 0.9s; }
+        .site-card:nth-child(n+10) { animation-delay: 1s; }
+
+        /* Filter buttons */
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            padding: 1.5rem;
+            background: var(--surface);
+            border-radius: 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--surface-light);
+            color: var(--text-secondary);
+            border: 2px solid transparent;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .site-card.hidden {
+            display: none;
+        }
+
+        .stats-container {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🤖 AI Lernen</h1>
+        <p class="subtitle">Die besten Webseiten zum Thema Künstliche Intelligenz</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p>Entdecke die besten Online-Ressourcen, um Künstliche Intelligenz zu lernen. Von Grundlagen bis zu fortgeschrittenen Konzepten - hier findest du kuratierte Webseiten für jeden Kenntnisstand.</p>
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="alle">Alle anzeigen</button>
+            <button class="filter-btn" data-category="platform">Platform & API</button>
+            <button class="filter-btn" data-category="kurse">Online Kurse</button>
+            <button class="filter-btn" data-category="praxis">Praktisches Lernen</button>
+            <button class="filter-btn" data-category="forschung">Forschung</button>
+            <button class="filter-btn" data-category="community">Community & Tools</button>
+            <button class="filter-btn" data-category="einsteiger">Einsteiger</button>
+            <button class="filter-btn" data-category="akademisch">Akademisch</button>
+        </div>
+
+        <div class="stats-container">
+            <span id="site-count">24</span> Webseiten verfügbar
+        </div>
+
+        <div class="sites-grid">
+            <!-- OpenAI -->
+            <div class="site-card" data-category="platform">
+                <div class="site-icon">🚀</div>
+                <h2 class="site-title">OpenAI</h2>
+                <span class="site-category">Platform & API</span>
+                <p class="site-description">Führende KI-Forschungsorganisation mit GPT-Modellen und umfassender Dokumentation. Ideal für praktische KI-Anwendungen.</p>
+                <a href="https://openai.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Coursera AI -->
+            <div class="site-card" data-category="kurse">
+                <div class="site-icon">🎓</div>
+                <h2 class="site-title">Coursera AI Courses</h2>
+                <span class="site-category">Online Kurse</span>
+                <p class="site-description">Strukturierte Kurse von Top-Universitäten wie Stanford. Andrew Ng's Machine Learning Kurs ist ein Klassiker.</p>
+                <a href="https://www.coursera.org/courses?query=artificial%20intelligence" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- fast.ai -->
+            <div class="site-card" data-category="praxis">
+                <div class="site-icon">⚡</div>
+                <h2 class="site-title">fast.ai</h2>
+                <span class="site-category">Praktisches Lernen</span>
+                <p class="site-description">Kostenlose Deep Learning Kurse mit praktischem Ansatz. Perfekt für den schnellen Einstieg in neuronale Netze.</p>
+                <a href="https://www.fast.ai" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- DeepLearning.AI -->
+            <div class="site-card" data-category="kurse">
+                <div class="site-icon">🧠</div>
+                <h2 class="site-title">DeepLearning.AI</h2>
+                <span class="site-category">Spezialisierungen</span>
+                <span class="badge">Empfohlen</span>
+                <p class="site-description">Von Andrew Ng gegründete Plattform mit spezialisierten Deep Learning Kursen und Zertifikaten.</p>
+                <a href="https://www.deeplearning.ai" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Hugging Face -->
+            <div class="site-card" data-category="community">
+                <div class="site-icon">🤗</div>
+                <h2 class="site-title">Hugging Face</h2>
+                <span class="site-category">Modelle & Community</span>
+                <p class="site-description">Open-Source Plattform für ML-Modelle. Riesige Community und vortrainierte Transformer-Modelle.</p>
+                <a href="https://huggingface.co" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Google AI -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">🔬</div>
+                <h2 class="site-title">Google AI</h2>
+                <span class="site-category">Forschung & Tools</span>
+                <p class="site-description">Google's KI-Forschung, TensorFlow Tutorials und Machine Learning Crash Course für Einsteiger.</p>
+                <a href="https://ai.google/education/" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Papers With Code -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">📄</div>
+                <h2 class="site-title">Papers With Code</h2>
+                <span class="site-category">Forschung</span>
+                <p class="site-description">Neueste ML/AI Papers mit zugehörigem Code. Bleibe auf dem neuesten Stand der Forschung.</p>
+                <a href="https://paperswithcode.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Kaggle -->
+            <div class="site-card" data-category="praxis">
+                <div class="site-icon">🏆</div>
+                <h2 class="site-title">Kaggle</h2>
+                <span class="site-category">Praxis & Wettbewerbe</span>
+                <p class="site-description">Praktische ML-Projekte, Datasets und Wettbewerbe. Lerne durch echte Herausforderungen.</p>
+                <a href="https://www.kaggle.com/learn" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- MIT OpenCourseWare -->
+            <div class="site-card" data-category="akademisch">
+                <div class="site-icon">🎯</div>
+                <h2 class="site-title">MIT OpenCourseWare</h2>
+                <span class="site-category">Akademisch</span>
+                <p class="site-description">Kostenlose MIT Kurse über KI und Machine Learning. Hochwertige akademische Inhalte.</p>
+                <a href="https://ocw.mit.edu/search/?q=artificial%20intelligence" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Towards Data Science -->
+            <div class="site-card" data-category="community">
+                <div class="site-icon">📊</div>
+                <h2 class="site-title">Towards Data Science</h2>
+                <span class="site-category">Blog & Tutorials</span>
+                <p class="site-description">Medium Publication mit tausenden AI/ML Artikeln. Täglich neue Tutorials und Einblicke.</p>
+                <a href="https://towardsdatascience.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Elements of AI -->
+            <div class="site-card" data-category="einsteiger">
+                <div class="site-icon">🌟</div>
+                <h2 class="site-title">Elements of AI</h2>
+                <span class="site-category">Einsteiger</span>
+                <span class="badge">Kostenlos</span>
+                <p class="site-description">Kostenloser Einsteigerkurs ohne Vorkenntnisse. Perfekt für absoluten Einstieg in KI.</p>
+                <a href="https://www.elementsofai.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Stanford CS229 -->
+            <div class="site-card" data-category="akademisch">
+                <div class="site-icon">🏛️</div>
+                <h2 class="site-title">Stanford CS229</h2>
+                <span class="site-category">Akademisch</span>
+                <p class="site-description">Stanford's legendärer Machine Learning Kurs. Umfassende theoretische Grundlagen.</p>
+                <a href="https://cs229.stanford.edu" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Udacity AI -->
+            <div class="site-card" data-category="kurse">
+                <div class="site-icon">🎮</div>
+                <h2 class="site-title">Udacity AI Nanodegrees</h2>
+                <span class="site-category">Online Kurse</span>
+                <p class="site-description">Praxisorientierte Nanodegree Programme für AI und Machine Learning mit Projekt-basierten Lernen.</p>
+                <a href="https://www.udacity.com/school-of-ai" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- edX AI -->
+            <div class="site-card" data-category="kurse">
+                <div class="site-icon">🎓</div>
+                <h2 class="site-title">edX AI Courses</h2>
+                <span class="site-category">Online Kurse</span>
+                <p class="site-description">Universitäts-Kurse von Harvard, MIT und mehr. Professionelle Zertifikate und MicroMasters.</p>
+                <a href="https://www.edx.org/learn/artificial-intelligence" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- LangChain -->
+            <div class="site-card" data-category="platform">
+                <div class="site-icon">⛓️</div>
+                <h2 class="site-title">LangChain</h2>
+                <span class="site-category">Platform & API</span>
+                <p class="site-description">Framework für die Entwicklung von LLM-Anwendungen. Perfekt für praktische AI-App-Entwicklung.</p>
+                <a href="https://www.langchain.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Anthropic Claude -->
+            <div class="site-card" data-category="platform">
+                <div class="site-icon">🔮</div>
+                <h2 class="site-title">Anthropic Claude</h2>
+                <span class="site-category">Platform & API</span>
+                <p class="site-description">Sicherer AI-Assistent mit verfügbarer API. Fokus auf hilfreiche und sichere AI-Systeme.</p>
+                <a href="https://www.anthropic.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- PyTorch Tutorials -->
+            <div class="site-card" data-category="praxis">
+                <div class="site-icon">🔥</div>
+                <h2 class="site-title">PyTorch Tutorials</h2>
+                <span class="site-category">Praktisches Lernen</span>
+                <p class="site-description">Offizielle PyTorch Dokumentation und Tutorials. Für Deep Learning Implementierungen.</p>
+                <a href="https://pytorch.org/tutorials/" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- TensorFlow -->
+            <div class="site-card" data-category="praxis">
+                <div class="site-icon">🧮</div>
+                <h2 class="site-title">TensorFlow</h2>
+                <span class="site-category">Praktisches Lernen</span>
+                <p class="site-description">Google's ML-Plattform mit umfassenden Tutorials und Guides für alle Niveaus.</p>
+                <a href="https://www.tensorflow.org/learn" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- AI Alignment Forum -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">🎯</div>
+                <h2 class="site-title">AI Alignment Forum</h2>
+                <span class="site-category">Forschung</span>
+                <p class="site-description">Diskussionen über AI Safety, Alignment und die Zukunft künstlicher Intelligenz.</p>
+                <a href="https://www.alignmentforum.org" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Google Colab -->
+            <div class="site-card" data-category="community">
+                <div class="site-icon">💻</div>
+                <h2 class="site-title">Google Colab</h2>
+                <span class="site-category">Community & Tools</span>
+                <span class="badge">Kostenlos</span>
+                <p class="site-description">Kostenlose Jupyter Notebooks in der Cloud mit GPU-Zugriff. Ideal für ML-Experimente.</p>
+                <a href="https://colab.research.google.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Stanford AI Lab -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">🔬</div>
+                <h2 class="site-title">Stanford AI Lab (SAIL)</h2>
+                <span class="site-category">Forschung</span>
+                <p class="site-description">Führendes AI-Forschungslabor mit wegweisenden Projekten und Publikationen.</p>
+                <a href="https://ai.stanford.edu" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Khan Academy AI -->
+            <div class="site-card" data-category="einsteiger">
+                <div class="site-icon">📚</div>
+                <h2 class="site-title">Khan Academy - AI & ML</h2>
+                <span class="site-category">Einsteiger</span>
+                <span class="badge">Kostenlos</span>
+                <p class="site-description">Kostenlose Einführungskurse in AI und Machine Learning für absolute Anfänger.</p>
+                <a href="https://www.khanacademy.org/computing/computer-science" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- 3Blue1Brown -->
+            <div class="site-card" data-category="einsteiger">
+                <div class="site-icon">🎬</div>
+                <h2 class="site-title">3Blue1Brown Neural Networks</h2>
+                <span class="site-category">Einsteiger</span>
+                <p class="site-description">Visuell beeindruckende Video-Serie über neuronale Netze und Deep Learning Konzepte.</p>
+                <a href="https://www.3blue1brown.com/topics/neural-networks" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Distill.pub -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">📐</div>
+                <h2 class="site-title">Distill</h2>
+                <span class="site-category">Forschung</span>
+                <p class="site-description">Interaktive Machine Learning Artikel mit klaren visuellen Erklärungen.</p>
+                <a href="https://distill.pub" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-text">🤖 Kuratierte Liste der besten AI-Lernressourcen · 2024</p>
+        <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.8rem;">Bleib neugierig und lerne weiter!</p>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const siteCards = document.querySelectorAll('.site-card');
+        const siteCountElement = document.getElementById('site-count');
+
+        function updateSiteCount() {
+            const visibleCards = document.querySelectorAll('.site-card:not(.hidden)');
+            siteCountElement.textContent = visibleCards.length;
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                // Filter cards
+                siteCards.forEach(card => {
+                    if (category === 'alle') {
+                        card.classList.remove('hidden');
+                    } else {
+                        if (card.getAttribute('data-category') === category) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+
+                // Update count
+                updateSiteCount();
+                
+                // Scroll to grid smoothly
+                document.querySelector('.sites-grid').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            });
+        });
+
+        // Initialize count
+        updateSiteCount();
+    </script>
+</body>
+</html>
