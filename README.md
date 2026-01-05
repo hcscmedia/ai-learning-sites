@@ -31,6 +31,14 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
   - Audio & Musik (Suno AI, ElevenLabs)
   - Code-Assistenten (GitHub Copilot, Cursor)
 
+- 💎 **Kostenlose KI-Anbieter**: Über 20 komplett kostenlose KI-Tools
+  - Text & Chat KI ohne Kosten
+  - Bildbearbeitung & Generierung
+  - Video & Audio Tools
+  - Produktivitäts-KI
+  - Entwickler-Tools
+  - Forschung & Daten
+
 - ✍️ **Prompt-Bibliothek**: Speichern und verwalten Sie Ihre Prompts
   - Formular zum Hinzufügen neuer Prompts
   - Kategorisierung nach Anwendungsbereich
@@ -66,6 +74,9 @@ Die Startseite bietet eine umfassende Einführung in die Welt der KI mit Informa
 
 ### KI-Modelle
 Alle verfügbaren KI-Modelle kategorisiert nach Anwendungsbereich mit detaillierten Beschreibungen.
+
+### Kostenlose KI-Anbieter
+Über 20 komplett kostenlose KI-Tools und Dienste ohne versteckte Kosten.
 
 ### Prompt-Bibliothek
 Persönliche Prompt-Verwaltung mit Kategorien, Suche, Filter und LocalStorage-Speicherung.
@@ -109,6 +120,7 @@ ai-learning-sites/
 ├── index.html              # Hauptseite mit KI-Übersicht und News
 ├── lernplattformen.html    # Seite mit Lernplattformen
 ├── ki-modelle.html         # Seite mit KI-Modellen
+├── ki-anbieter.html        # Kostenlose KI-Anbieter
 ├── prompts.html            # Prompt-Bibliothek und Verwaltung
 ├── styles.css              # Styling für alle Seiten
 └── README.md               # Projektdokumentation
@@ -190,13 +202,14 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 ## 📊 Statistiken
 
 - **20+** Lernplattformen
-- **4** Hauptbereiche (News, Lernen, Modelle, Prompts)
+- **40+** KI-Modelle und Tools
+- **20+** Kostenlose KI-Anbieter
+- **5** Hauptbereiche (News, Lernen, Modelle, Anbieter, Prompts)
 - **6** Aktuelle KI-Nachrichten
 - **8** Prompt-Kategorien
 - **100%** Responsive Design
 - **LocalStorage** für persistente Datenspeicherung
-- **0** Dependencies - Pure HTML/CSS/J
-- **0** Dependencies - Pure HTML/CSS
+- **0** Dependencies - Pure HTML/CSS/JS
 
 ---
 
