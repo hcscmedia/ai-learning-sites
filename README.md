@@ -122,6 +122,8 @@ ai-learning-sites/
 ├── ki-modelle.html         # Seite mit KI-Modellen
 ├── ki-anbieter.html        # Kostenlose KI-Anbieter
 ├── prompts.html            # Prompt-Bibliothek und Verwaltung
+├── about.html              # Über das Projekt
+├── impressum.html          # Impressum und rechtliche Hinweise
 ├── styles.css              # Styling für alle Seiten
 └── README.md               # Projektdokumentation
 ```
@@ -204,12 +206,13 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 - **20+** Lernplattformen
 - **40+** KI-Modelle und Tools
 - **20+** Kostenlose KI-Anbieter
-- **5** Hauptbereiche (News, Lernen, Modelle, Anbieter, Prompts)
+- **7** Hauptseiten (News, Lernen, Modelle, Anbieter, Prompts, Über, Impressum)
 - **6** Aktuelle KI-Nachrichten
 - **8** Prompt-Kategorien
 - **100%** Responsive Design
 - **LocalStorage** für persistente Datenspeicherung
 - **0** Dependencies - Pure HTML/CSS/JS
+- **Open Source** auf GitHub
 
 ---
 
