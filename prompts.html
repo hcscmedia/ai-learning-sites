@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-Bibliothek - KI/AI Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🤖 KI/AI Portal</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="lernplattformen.html">Lernplattformen</a></li>
+                    <li><a href="ki-modelle.html">KI-Modelle</a></li>
+                    <li><a href="prompts.html" class="active">Prompts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>✍️ Prompt-Bibliothek</h2>
+                <p class="hero-subtitle">Speichern und verwalten Sie Ihre besten Prompts für KI-Modelle</p>
+            </div>
+        </section>
+
+        <section class="prompt-manager">
+            <div class="container">
+                <div class="prompt-form-container">
+                    <h3>Neuen Prompt hinzufügen</h3>
+                    <form id="promptForm" class="prompt-form">
+                        <div class="form-group">
+                            <label for="promptTitle">Titel *</label>
+                            <input type="text" id="promptTitle" placeholder="z.B. Blog-Artikel schreiben" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="promptCategory">Kategorie *</label>
+                            <select id="promptCategory" required>
+                                <option value="">Kategorie auswählen</option>
+                                <option value="text">Text & Content</option>
+                                <option value="code">Programmierung</option>
+                                <option value="image">Bildgenerierung</option>
+                                <option value="data">Datenanalyse</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="education">Bildung & Lernen</option>
+                                <option value="creative">Kreativ & Design</option>
+                                <option value="business">Business & Produktivität</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="promptModel">KI-Modell</label>
+                            <select id="promptModel">
+                                <option value="">Alle Modelle</option>
+                                <option value="chatgpt">ChatGPT</option>
+                                <option value="claude">Claude</option>
+                                <option value="gemini">Google Gemini</option>
+                                <option value="copilot">Microsoft Copilot</option>
+                                <option value="midjourney">Midjourney</option>
+                                <option value="dalle">DALL-E</option>
+                                <option value="stable-diffusion">Stable Diffusion</option>
+                                <option value="other">Andere</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="promptContent">Prompt-Text *</label>
+                            <textarea id="promptContent" rows="6" placeholder="Ihr Prompt..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="promptTags">Tags (kommagetrennt)</label>
+                            <input type="text" id="promptTags" placeholder="z.B. blog, content, seo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="promptNotes">Notizen / Verwendungshinweise</label>
+                            <textarea id="promptNotes" rows="3" placeholder="Optionale Notizen zur Verwendung..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Prompt speichern</button>
+                            <button type="reset" class="btn btn-secondary">Zurücksetzen</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="prompt-filters">
+                    <h3>Gespeicherte Prompts</h3>
+                    <div class="filter-controls">
+                        <input type="text" id="searchPrompts" class="search-input" placeholder="🔍 Prompts durchsuchen...">
+                        <select id="filterCategory" class="filter-select">
+                            <option value="">Alle Kategorien</option>
+                            <option value="text">Text & Content</option>
+                            <option value="code">Programmierung</option>
+                            <option value="image">Bildgenerierung</option>
+                            <option value="data">Datenanalyse</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="education">Bildung & Lernen</option>
+                            <option value="creative">Kreativ & Design</option>
+                            <option value="business">Business & Produktivität</option>
+                        </select>
+                        <select id="filterModel" class="filter-select">
+                            <option value="">Alle Modelle</option>
+                            <option value="chatgpt">ChatGPT</option>
+                            <option value="claude">Claude</option>
+                            <option value="gemini">Google Gemini</option>
+                            <option value="copilot">Microsoft Copilot</option>
+                            <option value="midjourney">Midjourney</option>
+                            <option value="dalle">DALL-E</option>
+                            <option value="stable-diffusion">Stable Diffusion</option>
+                            <option value="other">Andere</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="promptsList" class="prompts-list">
+                    <div class="empty-state">
+                        <div class="empty-icon">📝</div>
+                        <h4>Noch keine Prompts gespeichert</h4>
+                        <p>Fügen Sie Ihren ersten Prompt hinzu, um Ihre persönliche Bibliothek aufzubauen!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="prompt-tips">
+            <div class="container">
+                <h3>💡 Tipps für bessere Prompts</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>1. Sei spezifisch</h4>
+                        <p>Je detaillierter Ihr Prompt, desto besser die Ergebnisse. Geben Sie Kontext, Zielgruppe und gewünschten Stil an.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>2. Struktur verwenden</h4>
+                        <p>Nutzen Sie Absätze, Aufzählungen und klare Anweisungen, um komplexe Prompts zu strukturieren.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>3. Beispiele geben</h4>
+                        <p>Zeigen Sie der KI Beispiele für das gewünschte Format oder den Stil der Ausgabe.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>4. Iterativ verfeinern</h4>
+                        <p>Verbessern Sie Ihre Prompts basierend auf den Ergebnissen. Experimentieren Sie mit Variationen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 KI/AI Portal. Alle Rechte vorbehalten.</p>
+            <p>Ihr umfassendes Portal für Künstliche Intelligenz und Machine Learning</p>
+        </div>
+    </footer>
+
+    <script>
+        // Prompts aus LocalStorage laden
+        let prompts = JSON.parse(localStorage.getItem('prompts')) || [];
+
+        // Formular Event Listener
+        document.getElementById('promptForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const prompt = {
+                id: Date.now(),
+                title: document.getElementById('promptTitle').value,
+                category: document.getElementById('promptCategory').value,
+                model: document.getElementById('promptModel').value || 'Alle Modelle',
+                content: document.getElementById('promptContent').value,
+                tags: document.getElementById('promptTags').value.split(',').map(tag => tag.trim()).filter(tag => tag),
+                notes: document.getElementById('promptNotes').value,
+                createdAt: new Date().toISOString()
+            };
+            
+            prompts.unshift(prompt);
+            localStorage.setItem('prompts', JSON.stringify(prompts));
+            
+            this.reset();
+            displayPrompts();
+            
+            // Success feedback
+            showNotification('Prompt erfolgreich gespeichert!');
+        });
+
+        // Filter Event Listeners
+        document.getElementById('searchPrompts').addEventListener('input', displayPrompts);
+        document.getElementById('filterCategory').addEventListener('change', displayPrompts);
+        document.getElementById('filterModel').addEventListener('change', displayPrompts);
+
+        // Prompts anzeigen
+        function displayPrompts() {
+            const searchTerm = document.getElementById('searchPrompts').value.toLowerCase();
+            const categoryFilter = document.getElementById('filterCategory').value;
+            const modelFilter = document.getElementById('filterModel').value;
+            
+            let filteredPrompts = prompts.filter(prompt => {
+                const matchesSearch = !searchTerm || 
+                    prompt.title.toLowerCase().includes(searchTerm) ||
+                    prompt.content.toLowerCase().includes(searchTerm) ||
+                    prompt.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+                
+                const matchesCategory = !categoryFilter || prompt.category === categoryFilter;
+                const matchesModel = !modelFilter || prompt.model === modelFilter;
+                
+                return matchesSearch && matchesCategory && matchesModel;
+            });
+            
+            const promptsList = document.getElementById('promptsList');
+            
+            if (filteredPrompts.length === 0) {
+                promptsList.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">🔍</div>
+                        <h4>Keine Prompts gefunden</h4>
+                        <p>Versuchen Sie es mit anderen Suchbegriffen oder Filtern.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            promptsList.innerHTML = filteredPrompts.map(prompt => `
+                <div class="prompt-card" data-id="${prompt.id}">
+                    <div class="prompt-header">
+                        <h4>${escapeHtml(prompt.title)}</h4>
+                        <div class="prompt-actions">
+                            <button class="btn-icon" onclick="copyPrompt(${prompt.id})" title="Kopieren">📋</button>
+                            <button class="btn-icon" onclick="editPrompt(${prompt.id})" title="Bearbeiten">✏️</button>
+                            <button class="btn-icon" onclick="deletePrompt(${prompt.id})" title="Löschen">🗑️</button>
+                        </div>
+                    </div>
+                    <div class="prompt-meta">
+                        <span class="badge badge-${prompt.category}">${getCategoryName(prompt.category)}</span>
+                        <span class="badge badge-model">${escapeHtml(prompt.model)}</span>
+                        <span class="prompt-date">${formatDate(prompt.createdAt)}</span>
+                    </div>
+                    <div class="prompt-content">
+                        <pre>${escapeHtml(prompt.content)}</pre>
+                    </div>
+                    ${prompt.notes ? `<div class="prompt-notes"><strong>Notizen:</strong> ${escapeHtml(prompt.notes)}</div>` : ''}
+                    ${prompt.tags.length > 0 ? `
+                        <div class="prompt-tags">
+                            ${prompt.tags.map(tag => `<span class="tag">#${escapeHtml(tag)}</span>`).join(' ')}
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        // Prompt kopieren
+        function copyPrompt(id) {
+            const prompt = prompts.find(p => p.id === id);
+            if (prompt) {
+                navigator.clipboard.writeText(prompt.content).then(() => {
+                    showNotification('Prompt in Zwischenablage kopiert!');
+                });
+            }
+        }
+
+        // Prompt bearbeiten
+        function editPrompt(id) {
+            const prompt = prompts.find(p => p.id === id);
+            if (prompt) {
+                document.getElementById('promptTitle').value = prompt.title;
+                document.getElementById('promptCategory').value = prompt.category;
+                document.getElementById('promptModel').value = prompt.model === 'Alle Modelle' ? '' : prompt.model;
+                document.getElementById('promptContent').value = prompt.content;
+                document.getElementById('promptTags').value = prompt.tags.join(', ');
+                document.getElementById('promptNotes').value = prompt.notes;
+                
+                // Scroll zum Formular
+                document.getElementById('promptForm').scrollIntoView({ behavior: 'smooth' });
+                
+                // Prompt löschen, da er nach dem Speichern neu erstellt wird
+                deletePrompt(id, false);
+            }
+        }
+
+        // Prompt löschen
+        function deletePrompt(id, showConfirm = true) {
+            if (!showConfirm || confirm('Möchten Sie diesen Prompt wirklich löschen?')) {
+                prompts = prompts.filter(p => p.id !== id);
+                localStorage.setItem('prompts', JSON.stringify(prompts));
+                displayPrompts();
+                if (showConfirm) {
+                    showNotification('Prompt gelöscht!');
+                }
+            }
+        }
+
+        // Hilfsfunktionen
+        function getCategoryName(category) {
+            const names = {
+                'text': 'Text & Content',
+                'code': 'Programmierung',
+                'image': 'Bildgenerierung',
+                'data': 'Datenanalyse',
+                'marketing': 'Marketing',
+                'education': 'Bildung',
+                'creative': 'Kreativ',
+                'business': 'Business'
+            };
+            return names[category] || category;
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('de-DE', { 
+                year: 'numeric', 
+                month: 'short', 
+                day: 'numeric' 
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Initial anzeigen
+        displayPrompts();
+    </script>
+</body>
+</html>

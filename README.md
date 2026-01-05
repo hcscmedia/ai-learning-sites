@@ -13,6 +13,12 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
 
 ### ✨ Features
 
+- � **KI-Nachrichten**: Aktuelle News und Updates aus der KI-Welt
+  - Neueste Entwicklungen von OpenAI, Google, Anthropic
+  - Durchbrüche in Forschung und Technologie
+  - Regulierungen und Richtlinien
+  - Direkte Links zu Originalquellen
+
 - 📚 **Lernplattformen**: Umfassende Übersicht über 20+ KI-Lernplattformen
   - Universitäre Plattformen (Coursera, edX, Udacity)
   - Kostenlose Ressourcen (Fast.ai, Kaggle Learn, Google AI)
@@ -24,6 +30,14 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
   - Video-KI (Runway, Pika, Luma AI)
   - Audio & Musik (Suno AI, ElevenLabs)
   - Code-Assistenten (GitHub Copilot, Cursor)
+
+- ✍️ **Prompt-Bibliothek**: Speichern und verwalten Sie Ihre Prompts
+  - Formular zum Hinzufügen neuer Prompts
+  - Kategorisierung nach Anwendungsbereich
+  - Filter- und Suchfunktionen
+  - Kopieren, Bearbeiten und Löschen von Prompts
+  - LocalStorage-basierte Speicherung
+  - Tags und Notizen für bessere Organisation
   
 - 💡 **Wissensbereich**: Detaillierte Informationen zu
   - Machine Learning & Deep Learning
@@ -52,6 +66,9 @@ Die Startseite bietet eine umfassende Einführung in die Welt der KI mit Informa
 
 ### KI-Modelle
 Alle verfügbaren KI-Modelle kategorisiert nach Anwendungsbereich mit detaillierten Beschreibungen.
+
+### Prompt-Bibliothek
+Persönliche Prompt-Verwaltung mit Kategorien, Suche, Filter und LocalStorage-Speicherung.
 
 ## 🚀 Installation & Verwendung
 
@@ -89,9 +106,10 @@ Das Projekt ist bereits für GitHub Pages konfiguriert und kann direkt genutzt w
 
 ```
 ai-learning-sites/
-├── index.html              # Hauptseite mit KI-Übersicht
+├── index.html              # Hauptseite mit KI-Übersicht und News
 ├── lernplattformen.html    # Seite mit Lernplattformen
 ├── ki-modelle.html         # Seite mit KI-Modellen
+├── prompts.html            # Prompt-Bibliothek und Verwaltung
 ├── styles.css              # Styling für alle Seiten
 └── README.md               # Projektdokumentation
 ```
@@ -99,8 +117,9 @@ ai-learning-sites/
 ## 🛠️ Technologien
 
 - **HTML5**: Semantisches Markup
-- **CSS3**: Modernes Styling mit CSS Grid, Flexbox und Custom Properties
+- **JavaScript**: Vanilla JS für Prompt-Verwaltung und LocalStorage
 - **Responsive Design**: Mobile-First Ansatz
+- **Keine Frameworks**: Reines HTML/CSS/JAnsatz
 - **Keine Frameworks**: Reines HTML/CSS für schnelle Ladezeiten
 
 ## 📚 Enthaltene Ressourcen
@@ -171,9 +190,12 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 ## 📊 Statistiken
 
 - **20+** Lernplattformen
-- **40+** KI-Modelle und Tools
-- **3** Hauptkategorien (Lernen, Modelle, Wissen)
+- **4** Hauptbereiche (News, Lernen, Modelle, Prompts)
+- **6** Aktuelle KI-Nachrichten
+- **8** Prompt-Kategorien
 - **100%** Responsive Design
+- **LocalStorage** für persistente Datenspeicherung
+- **0** Dependencies - Pure HTML/CSS/J
 - **0** Dependencies - Pure HTML/CSS
 
 ---
