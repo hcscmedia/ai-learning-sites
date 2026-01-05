@@ -1841,3 +1841,107 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===========================
+   NEWS CATEGORIES
+   =========================== */
+
+.news-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.news-category {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--border-color);
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.news-footer {
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-lg);
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.news-footer p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Responsive - News Categories */
+@media (max-width: 768px) {
+    .category-title {
+        font-size: 1.25rem;
+    }
+    
+    .news-intro {
+        font-size: 1rem;
+    }
+}
+
+/* ===========================
+   NEWS CATEGORIES
+   =========================== */
+
+.news-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.news-category {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--border-color);
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.news-footer {
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-lg);
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.news-footer p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Responsive - News Categories */
+@media (max-width: 768px) {
+    .category-title {
+        font-size: 1.25rem;
+    }
+    
+    .news-intro {
+        font-size: 1rem;
+    }
+}

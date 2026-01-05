@@ -13,11 +13,13 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
 
 ### ✨ Features
 
-- � **KI-Nachrichten**: Aktuelle News und Updates aus der KI-Welt
-  - Neueste Entwicklungen von OpenAI, Google, Anthropic
+- 📰 **KI-Nachrichten**: Aktuelle News und Updates aus der KI-Welt
+  - Kategorisiert nach: Modelle, Produkte, Forschung, Regulierung, Business
+  - Neueste Entwicklungen von OpenAI, Google, Anthropic, Meta
   - Durchbrüche in Forschung und Technologie
   - Regulierungen und Richtlinien
   - Direkte Links zu Originalquellen
+  - Regelmäßig aktualisiert (Januar 2026)
 
 - 📚 **Lernplattformen**: Umfassende Übersicht über 30+ KI-Lernplattformen
   - Universitäre Plattformen (Coursera, edX, Udacity, Stanford, MIT)
@@ -209,8 +211,8 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 - **30+** Lernplattformen
 - **40+** KI-Modelle und Tools
 - **40+** Kostenlose KI-Anbieter
+- **18** Aktuelle KI-Nachrichten (5 Kategorien)
 - **7** Hauptseiten (News, Lernen, Modelle, Anbieter, Prompts, Über, Impressum)
-- **6** Aktuelle KI-Nachrichten
 - **8** Prompt-Kategorien
 - **100%** Responsive Design
 - **LocalStorage** für persistente Datenspeicherung
