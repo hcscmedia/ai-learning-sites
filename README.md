@@ -19,10 +19,11 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
   - Regulierungen und Richtlinien
   - Direkte Links zu Originalquellen
 
-- 📚 **Lernplattformen**: Umfassende Übersicht über 20+ KI-Lernplattformen
-  - Universitäre Plattformen (Coursera, edX, Udacity)
-  - Kostenlose Ressourcen (Fast.ai, Kaggle Learn, Google AI)
-  - Spezialisierte Anbieter (DeepLearning.AI, Hugging Face)
+- 📚 **Lernplattformen**: Umfassende Übersicht über 30+ KI-Lernplattformen
+  - Universitäre Plattformen (Coursera, edX, Udacity, Stanford, MIT)
+  - Kostenlose Ressourcen (Fast.ai, Kaggle Learn, Google AI, Khan Academy)
+  - Spezialisierte Anbieter (DeepLearning.AI, Hugging Face, LangChain)
+  - Cloud-Provider (AWS, Microsoft, IBM)
   
 - 🚀 **KI-Modelle**: Direktzugriff auf 40+ Online-KI-Tools
   - Text-KI (ChatGPT, Claude, Gemini, etc.)
@@ -138,11 +139,13 @@ ai-learning-sites/
 
 ## 📚 Enthaltene Ressourcen
 
-### Lernplattformen (20+)
-- Coursera, edX, Udacity, DeepLearning.AI
-- Fast.ai, Kaggle Learn, Google AI, Microsoft Learn
-- DataCamp, Udemy, Pluralsight, LinkedIn Learning
-- Hugging Face, Elements of AI, freeCodeCamp
+### Lernplattformen (30+)
+- **Universitär:** Coursera, edX, Udacity, Stanford Online, MIT OpenCourseWare
+- **Spezialisiert:** DeepLearning.AI, Fast.ai, Kaggle Learn, Hugging Face
+- **Cloud-Provider:** Google AI, Microsoft Learn, AWS ML, IBM Skills Network
+- **Praktisch:** DataCamp, Udemy, Pluralsight, LinkedIn Learning, Codecademy
+- **Community:** freeCodeCamp, Khan Academy, Elements of AI, The Odin Project
+- **Modern:** LangChain Academy, Full Stack Deep Learning, Educative.io
 - Und viele mehr...
 
 ### KI-Modelle (40+)
@@ -203,7 +206,7 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 
 ## 📊 Statistiken
 
-- **20+** Lernplattformen
+- **30+** Lernplattformen
 - **40+** KI-Modelle und Tools
 - **40+** Kostenlose KI-Anbieter
 - **7** Hauptseiten (News, Lernen, Modelle, Anbieter, Prompts, Über, Impressum)
