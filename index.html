@@ -46,11 +46,178 @@
             </div>
         </section>
 
-        <section class="intro">
+        <section class="intro" id="ki-einfuehrung">
             <div class="container">
                 <div class="intro-content">
                     <h3>Was ist Künstliche Intelligenz?</h3>
-                    <p>Künstliche Intelligenz (KI) bzw. Artificial Intelligence (AI) ist ein Teilgebiet der Informatik, das sich mit der Automatisierung intelligenten Verhaltens und dem maschinellen Lernen befasst. KI-Systeme können lernen, Probleme zu lösen, Muster zu erkennen und Entscheidungen zu treffen.</p>
+                    <p class="intro-lead">Künstliche Intelligenz (KI) bzw. Artificial Intelligence (AI) ist ein Teilgebiet der Informatik, das sich mit der Automatisierung intelligenten Verhaltens und dem <a href="#machine-learning" class="internal-link">maschinellen Lernen</a> befasst. KI-Systeme können lernen, Probleme zu lösen, Muster zu erkennen und Entscheidungen zu treffen.</p>
+                    
+                    <!-- KI Info Tabs -->
+                    <div class="intro-tabs">
+                        <button class="intro-tab-btn active" data-intro-tab="grundlagen">📚 Grundlagen</button>
+                        <button class="intro-tab-btn" data-intro-tab="anwendungen">🎯 Anwendungen</button>
+                        <button class="intro-tab-btn" data-intro-tab="zukunft">🚀 Zukunft</button>
+                        <button class="intro-tab-btn" data-intro-tab="ethik">⚖️ Ethik</button>
+                    </div>
+
+                    <!-- Grundlagen Tab -->
+                    <div class="intro-tab-content active" data-intro-tab="grundlagen">
+                        <h4>🧠 Wie funktioniert KI?</h4>
+                        <p>Künstliche Intelligenz basiert auf Algorithmen und mathematischen Modellen, die es Computern ermöglichen, aus Daten zu lernen und Aufgaben auszuführen, die normalerweise menschliche Intelligenz erfordern.</p>
+                        
+                        <div class="info-boxes">
+                            <div class="info-mini-box">
+                                <h5>Machine Learning</h5>
+                                <p>Systeme lernen aus <strong>Erfahrungen</strong> und verbessern sich automatisch. Drei Hauptarten: <a href="#supervised-learning" class="internal-link">Supervised</a>, <a href="#unsupervised-learning" class="internal-link">Unsupervised</a> und <a href="#reinforcement-learning" class="internal-link">Reinforcement Learning</a>.</p>
+                                <a href="#machine-learning" class="btn-mini">Mehr erfahren →</a>
+                            </div>
+                            <div class="info-mini-box">
+                                <h5>Deep Learning</h5>
+                                <p>Nutzt <strong>künstliche neuronale Netze</strong> mit vielen Schichten. Basis für <a href="#image-recognition" class="internal-link">Bilderkennung</a>, <a href="#nlp" class="internal-link">Sprachverarbeitung</a> und mehr.</p>
+                                <a href="#deep-learning" class="btn-mini">Mehr erfahren →</a>
+                            </div>
+                            <div class="info-mini-box">
+                                <h5>Neural Networks</h5>
+                                <p>Mathematische Modelle, inspiriert vom <strong>menschlichen Gehirn</strong>. Bestehen aus Neuronen, die in Schichten organisiert sind.</p>
+                                <a href="#frameworks" class="btn-mini">Frameworks entdecken →</a>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack">
+                            <h5>🛠️ Wichtige Technologien:</h5>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><a href="#tensorflow" class="internal-link">TensorFlow</a></span>
+                                <span class="tech-tag"><a href="#pytorch" class="internal-link">PyTorch</a></span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">CUDA</span>
+                                <span class="tech-tag">NumPy</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anwendungen Tab -->
+                    <div class="intro-tab-content" data-intro-tab="anwendungen">
+                        <h4>🎯 Praktische Anwendungen der KI</h4>
+                        <p>KI ist heute in vielen Bereichen unseres Lebens präsent und revolutioniert Industrien weltweit.</p>
+                        
+                        <div class="application-grid">
+                            <div class="app-card">
+                                <div class="app-icon">💬</div>
+                                <h5>Kommunikation</h5>
+                                <ul>
+                                    <li><strong><a href="#chatbots" class="internal-link">Chatbots</a>:</strong> ChatGPT, Claude für intelligente Konversationen</li>
+                                    <li><strong><a href="#translation" class="internal-link">Übersetzung</a>:</strong> DeepL, Google Translate</li>
+                                    <li><strong>Spracherkennung:</strong> Siri, Alexa, Google Assistant</li>
+                                </ul>
+                                <a href="ki-modelle.html#text-ki" class="btn-mini">Text-KI erkunden →</a>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-icon">🎨</div>
+                                <h5>Kreativität</h5>
+                                <ul>
+                                    <li><strong><a href="#image-gen" class="internal-link">Bildgenerierung</a>:</strong> Midjourney, DALL-E, Stable Diffusion</li>
+                                    <li><strong><a href="#video-gen" class="internal-link">Video-KI</a>:</strong> Sora, Runway, Pika</li>
+                                    <li><strong><a href="#audio-gen" class="internal-link">Musik & Audio</a>:</strong> Suno, Udio, ElevenLabs</li>
+                                </ul>
+                                <a href="ki-modelle.html#bild-ki" class="btn-mini">Kreativ-KI entdecken →</a>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-icon">💼</div>
+                                <h5>Business & Produktivität</h5>
+                                <ul>
+                                    <li><strong>Automatisierung:</strong> Workflow-Optimierung</li>
+                                    <li><strong>Datenanalyse:</strong> Predictive Analytics</li>
+                                    <li><strong>Code-Assistenz:</strong> GitHub Copilot, Cursor</li>
+                                </ul>
+                                <a href="ki-anbieter.html" class="btn-mini">Tools ansehen →</a>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-icon">🏥</div>
+                                <h5>Wissenschaft & Medizin</h5>
+                                <ul>
+                                    <li><strong><a href="#medical-diagnosis" class="internal-link">Diagnose</a>:</strong> Erkennung von Krankheiten</li>
+                                    <li><strong>Forschung:</strong> Drug Discovery, Proteinfalten</li>
+                                    <li><strong>Bildanalyse:</strong> MRT, CT, Röntgen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zukunft Tab -->
+                    <div class="intro-tab-content" data-intro-tab="zukunft">
+                        <h4>🚀 Die Zukunft der KI</h4>
+                        <p>KI entwickelt sich rasant weiter und wird in den kommenden Jahren noch tiefgreifendere Veränderungen bringen.</p>
+                        
+                        <div class="future-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker">📍 Heute</div>
+                                <h5>Generative AI Boom</h5>
+                                <p><a href="#llms" class="internal-link">Large Language Models</a> und Diffusion Models revolutionieren Content-Erstellung. ChatGPT, Claude und Gemini erreichen Milliarden Nutzer.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">🔮 2026-2028</div>
+                                <h5>Multimodale Systeme</h5>
+                                <p>KI-Systeme, die Text, Bild, Video, Audio nahtlos kombinieren. <strong>Embodied AI</strong> in Robotik. Fortschritte bei <strong>AGI-Forschung</strong>.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">🌟 2029+</div>
+                                <h5>AGI & Superintelligenz?</h5>
+                                <p>Diskussion über <strong>Artificial General Intelligence</strong> - KI, die jede intellektuelle Aufgabe wie ein Mensch ausführen kann.</p>
+                            </div>
+                        </div>
+
+                        <div class="trends-box">
+                            <h5>🔥 Aktuelle Trends:</h5>
+                            <div class="trend-pills">
+                                <span class="trend-pill">Open Source LLMs</span>
+                                <span class="trend-pill">AI Agents</span>
+                                <span class="trend-pill">Multimodal AI</span>
+                                <span class="trend-pill">Edge AI</span>
+                                <span class="trend-pill">Quantum ML</span>
+                                <span class="trend-pill">Neuro-Symbolic AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ethik Tab -->
+                    <div class="intro-tab-content" data-intro-tab="ethik">
+                        <h4>⚖️ Ethik & Verantwortung</h4>
+                        <p>Mit großer Macht kommt große Verantwortung - KI wirft wichtige ethische Fragen auf.</p>
+                        
+                        <div class="ethics-grid">
+                            <div class="ethics-card">
+                                <div class="ethics-icon">🔒</div>
+                                <h5>Datenschutz & Privatsphäre</h5>
+                                <p>KI-Systeme verarbeiten riesige Datenmengen. <strong>GDPR-Compliance</strong>, Datenschutz und <strong>Privacy by Design</strong> sind essentiell.</p>
+                            </div>
+                            <div class="ethics-card">
+                                <div class="ethics-icon">⚖️</div>
+                                <h5>Bias & Fairness</h5>
+                                <p>KI kann Vorurteile aus Trainingsdaten übernehmen. <strong>Faire Algorithmen</strong> und diverse Datensätze sind wichtig.</p>
+                            </div>
+                            <div class="ethics-card">
+                                <div class="ethics-icon">🎯</div>
+                                <h5>Transparenz & Erklärbarkeit</h5>
+                                <p><strong>Explainable AI (XAI)</strong> macht KI-Entscheidungen nachvollziehbar. Wichtig für Vertrauen und Regulierung.</p>
+                            </div>
+                            <div class="ethics-card">
+                                <div class="ethics-icon">🌍</div>
+                                <h5>Nachhaltigkeit</h5>
+                                <p>Training großer KI-Modelle verbraucht viel Energie. <strong>Green AI</strong> und effiziente Algorithmen werden wichtiger.</p>
+                            </div>
+                        </div>
+
+                        <div class="regulation-box">
+                            <h5>📜 Wichtige Regulierungen:</h5>
+                            <ul>
+                                <li><strong>EU AI Act:</strong> Umfassende KI-Regulierung in Europa</li>
+                                <li><strong>Executive Orders (USA):</strong> Richtlinien für sichere KI-Entwicklung</li>
+                                <li><strong>AI Safety Institutes:</strong> Internationale Zusammenarbeit</li>
+                            </ul>
+                            <a href="#news" class="btn-mini">Aktuelle News →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -318,52 +485,110 @@
                         <div class="step-number">1</div>
                         <h4>Grundlagen lernen</h4>
                         <p>Beginnen Sie mit den Basics: Mathematik (Lineare Algebra, Statistik), Programmierung (Python) und KI-Konzepte</p>
+                        <div class="step-links">
+                            <a href="lernplattformen.html" class="step-link">📚 Zu den Lernplattformen</a>
+                            <a href="#machine-learning" class="step-link">🧠 ML-Grundlagen</a>
+                        </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <h4>Praktische Erfahrung</h4>
                         <p>Nutzen Sie Online-Kurse und Tutorials auf den Lernplattformen, arbeiten Sie an eigenen Projekten</p>
+                        <div class="step-links">
+                            <a href="lernplattformen.html#kaggle" class="step-link">🏆 Kaggle Competitions</a>
+                            <a href="prompts.html" class="step-link">✍️ Prompt-Bibliothek</a>
+                        </div>
                     </div>
                     <div class="step">
-                        <div class="step id="links"-number">3</div>
+                        <div class="step-number">3</div>
                         <h4>KI-Modelle testen</h4>
                         <p>Experimentieren Sie mit verfügbaren KI-Modellen, um ihre Fähigkeiten und Grenzen kennenzulernen</p>
+                        <div class="step-links">
+                            <a href="ki-modelle.html" class="step-link">🚀 KI-Modelle</a>
+                            <a href="ki-anbieter.html" class="step-link">🆓 Kostenlose Tools</a>
+                        </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <h4>Community beitreten</h4>
                         <p>Vernetzen Sie sich mit anderen KI-Enthusiasten, teilen Sie Ihr Wissen und lernen Sie voneinander</p>
+                        <div class="step-links">
+                            <a href="#links" class="step-link">👥 Communities</a>
+                            <a href="https://github.com/hcscmedia/ai-learning-sites" target="_blank" class="step-link">💻 GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="resources-links">
+        <section class="resources-links" id="links">
             <div class="container">
                 <h3>📖 Weitere Ressourcen</h3>
                 <div class="resources-grid">
                     <div class="resource-card">
-                        <h4>Dokumentationen</h4>
+                        <h4>📚 Dokumentationen</h4>
                         <ul>
                             <li><a href="https://www.tensorflow.org/learn" target="_blank">TensorFlow Docs</a></li>
                             <li><a href="https://pytorch.org/docs/" target="_blank">PyTorch Docs</a></li>
                             <li><a href="https://scikit-learn.org/stable/documentation.html" target="_blank">Scikit-learn Docs</a></li>
+                            <li><a href="https://keras.io/" target="_blank">Keras Documentation</a></li>
+                            <li><a href="https://docs.anthropic.com/" target="_blank">Anthropic Claude Docs</a></li>
+                            <li><a href="https://platform.openai.com/docs" target="_blank">OpenAI API Docs</a></li>
                         </ul>
                     </div>
                     <div class="resource-card">
-                        <h4>Communities</h4>
+                        <h4>👥 Communities</h4>
                         <ul>
-                            <li><a href="https://www.kaggle.com/" target="_blank">Kaggle</a></li>
-                            <li><a href="https://huggingface.co/" target="_blank">Hugging Face</a></li>
-                            <li><a href="https://github.com/topics/artificial-intelligence" target="_blank">GitHub AI</a></li>
+                            <li><a href="https://www.kaggle.com/" target="_blank">Kaggle - Competitions & Datasets</a></li>
+                            <li><a href="https://huggingface.co/" target="_blank">Hugging Face - Models & Datasets</a></li>
+                            <li><a href="https://github.com/topics/artificial-intelligence" target="_blank">GitHub AI - Open Source</a></li>
+                            <li><a href="https://www.reddit.com/r/MachineLearning/" target="_blank">Reddit r/MachineLearning</a></li>
+                            <li><a href="https://discord.gg/openai" target="_blank">OpenAI Discord</a></li>
+                            <li><a href="https://community.openai.com/" target="_blank">OpenAI Community Forum</a></li>
                         </ul>
                     </div>
                     <div class="resource-card">
-                        <h4>News & Blogs</h4>
+                        <h4>📰 News & Blogs</h4>
                         <ul>
                             <li><a href="https://openai.com/blog/" target="_blank">OpenAI Blog</a></li>
                             <li><a href="https://ai.googleblog.com/" target="_blank">Google AI Blog</a></li>
                             <li><a href="https://www.deeplearning.ai/blog/" target="_blank">DeepLearning.AI Blog</a></li>
+                            <li><a href="https://www.anthropic.com/news" target="_blank">Anthropic News</a></li>
+                            <li><a href="https://blog.google/technology/ai/" target="_blank">Google AI Updates</a></li>
+                            <li><a href="https://www.microsoft.com/en-us/ai/" target="_blank">Microsoft AI Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🎓 Forschung & Papers</h4>
+                        <ul>
+                            <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank">arXiv AI Papers</a></li>
+                            <li><a href="https://paperswithcode.com/" target="_blank">Papers with Code</a></li>
+                            <li><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></li>
+                            <li><a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a></li>
+                            <li><a href="https://distill.pub/" target="_blank">Distill - ML Research</a></li>
+                            <li><a href="https://proceedings.neurips.cc/" target="_blank">NeurIPS Proceedings</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🎥 Video-Ressourcen</h4>
+                        <ul>
+                            <li><a href="https://www.youtube.com/@3blue1brown" target="_blank">3Blue1Brown - ML Visualizations</a></li>
+                            <li><a href="https://www.youtube.com/@lexfridman" target="_blank">Lex Fridman Podcast</a></li>
+                            <li><a href="https://www.youtube.com/@Deeplearningai" target="_blank">DeepLearning.AI YouTube</a></li>
+                            <li><a href="https://www.youtube.com/@sentdex" target="_blank">Sentdex - Python AI</a></li>
+                            <li><a href="https://www.youtube.com/@TwoMinutePapers" target="_blank">Two Minute Papers</a></li>
+                            <li><a href="https://www.youtube.com/@OpenAI" target="_blank">OpenAI YouTube</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🛠️ Tools & Plattformen</h4>
+                        <ul>
+                            <li><a href="https://colab.research.google.com/" target="_blank">Google Colab - Free GPU</a></li>
+                            <li><a href="https://gradient.run/" target="_blank">Paperspace Gradient</a></li>
+                            <li><a href="https://wandb.ai/" target="_blank">Weights & Biases - MLOps</a></li>
+                            <li><a href="https://www.mlflow.org/" target="_blank">MLflow - ML Lifecycle</a></li>
+                            <li><a href="https://www.datarobot.com/" target="_blank">DataRobot - AutoML</a></li>
+                            <li><a href="https://app.roboflow.com/" target="_blank">Roboflow - Computer Vision</a></li>
                         </ul>
                     </div>
                 </div>
@@ -418,6 +643,27 @@
                         setTimeout(() => {
                             targetElement.style.backgroundColor = '';
                         }, 2000);
+                    }
+                });
+            });
+
+            // Intro-Tabs Funktionalität
+            const introTabButtons = document.querySelectorAll('.intro-tab-btn');
+            const introTabContents = document.querySelectorAll('.intro-tab-content');
+
+            introTabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tab = this.getAttribute('data-intro-tab');
+
+                    // Entferne active Klasse
+                    introTabButtons.forEach(btn => btn.classList.remove('active'));
+                    introTabContents.forEach(content => content.classList.remove('active'));
+
+                    // Füge active Klasse hinzu
+                    this.classList.add('active');
+                    const targetContent = document.querySelector(`.intro-tab-content[data-intro-tab="${tab}"]`);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
                     }
                 });
             });
