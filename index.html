@@ -249,6 +249,55 @@
         .site-card:nth-child(8) { animation-delay: 0.8s; }
         .site-card:nth-child(9) { animation-delay: 0.9s; }
         .site-card:nth-child(n+10) { animation-delay: 1s; }
+
+        /* Filter buttons */
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            padding: 1.5rem;
+            background: var(--surface);
+            border-radius: 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--surface-light);
+            color: var(--text-secondary);
+            border: 2px solid transparent;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .site-card.hidden {
+            display: none;
+        }
+
+        .stats-container {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
@@ -262,9 +311,24 @@
             <p>Entdecke die besten Online-Ressourcen, um Künstliche Intelligenz zu lernen. Von Grundlagen bis zu fortgeschrittenen Konzepten - hier findest du kuratierte Webseiten für jeden Kenntnisstand.</p>
         </div>
 
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="alle">Alle anzeigen</button>
+            <button class="filter-btn" data-category="platform">Platform & API</button>
+            <button class="filter-btn" data-category="kurse">Online Kurse</button>
+            <button class="filter-btn" data-category="praxis">Praktisches Lernen</button>
+            <button class="filter-btn" data-category="forschung">Forschung</button>
+            <button class="filter-btn" data-category="community">Community & Tools</button>
+            <button class="filter-btn" data-category="einsteiger">Einsteiger</button>
+            <button class="filter-btn" data-category="akademisch">Akademisch</button>
+        </div>
+
+        <div class="stats-container">
+            <span id="site-count">20</span> Webseiten verfügbar
+        </div>
+
         <div class="sites-grid">
             <!-- OpenAI -->
-            <div class="site-card">
+            <div class="site-card" data-category="platform">
                 <div class="site-icon">🚀</div>
                 <h2 class="site-title">OpenAI</h2>
                 <span class="site-category">Platform & API</span>
@@ -273,7 +337,7 @@
             </div>
 
             <!-- Coursera AI -->
-            <div class="site-card">
+            <div class="site-card" data-category="kurse">
                 <div class="site-icon">🎓</div>
                 <h2 class="site-title">Coursera AI Courses</h2>
                 <span class="site-category">Online Kurse</span>
@@ -282,7 +346,7 @@
             </div>
 
             <!-- fast.ai -->
-            <div class="site-card">
+            <div class="site-card" data-category="praxis">
                 <div class="site-icon">⚡</div>
                 <h2 class="site-title">fast.ai</h2>
                 <span class="site-category">Praktisches Lernen</span>
@@ -291,7 +355,7 @@
             </div>
 
             <!-- DeepLearning.AI -->
-            <div class="site-card">
+            <div class="site-card" data-category="kurse">
                 <div class="site-icon">🧠</div>
                 <h2 class="site-title">DeepLearning.AI</h2>
                 <span class="site-category">Spezialisierungen</span>
@@ -301,7 +365,7 @@
             </div>
 
             <!-- Hugging Face -->
-            <div class="site-card">
+            <div class="site-card" data-category="community">
                 <div class="site-icon">🤗</div>
                 <h2 class="site-title">Hugging Face</h2>
                 <span class="site-category">Modelle & Community</span>
@@ -310,7 +374,7 @@
             </div>
 
             <!-- Google AI -->
-            <div class="site-card">
+            <div class="site-card" data-category="forschung">
                 <div class="site-icon">🔬</div>
                 <h2 class="site-title">Google AI</h2>
                 <span class="site-category">Forschung & Tools</span>
@@ -319,7 +383,7 @@
             </div>
 
             <!-- Papers With Code -->
-            <div class="site-card">
+            <div class="site-card" data-category="forschung">
                 <div class="site-icon">📄</div>
                 <h2 class="site-title">Papers With Code</h2>
                 <span class="site-category">Forschung</span>
@@ -328,7 +392,7 @@
             </div>
 
             <!-- Kaggle -->
-            <div class="site-card">
+            <div class="site-card" data-category="praxis">
                 <div class="site-icon">🏆</div>
                 <h2 class="site-title">Kaggle</h2>
                 <span class="site-category">Praxis & Wettbewerbe</span>
@@ -337,7 +401,7 @@
             </div>
 
             <!-- MIT OpenCourseWare -->
-            <div class="site-card">
+            <div class="site-card" data-category="akademisch">
                 <div class="site-icon">🎯</div>
                 <h2 class="site-title">MIT OpenCourseWare</h2>
                 <span class="site-category">Akademisch</span>
@@ -346,7 +410,7 @@
             </div>
 
             <!-- Towards Data Science -->
-            <div class="site-card">
+            <div class="site-card" data-category="community">
                 <div class="site-icon">📊</div>
                 <h2 class="site-title">Towards Data Science</h2>
                 <span class="site-category">Blog & Tutorials</span>
@@ -355,7 +419,7 @@
             </div>
 
             <!-- Elements of AI -->
-            <div class="site-card">
+            <div class="site-card" data-category="einsteiger">
                 <div class="site-icon">🌟</div>
                 <h2 class="site-title">Elements of AI</h2>
                 <span class="site-category">Einsteiger</span>
@@ -365,12 +429,122 @@
             </div>
 
             <!-- Stanford CS229 -->
-            <div class="site-card">
+            <div class="site-card" data-category="akademisch">
                 <div class="site-icon">🏛️</div>
                 <h2 class="site-title">Stanford CS229</h2>
                 <span class="site-category">Akademisch</span>
                 <p class="site-description">Stanford's legendärer Machine Learning Kurs. Umfassende theoretische Grundlagen.</p>
                 <a href="https://cs229.stanford.edu" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Udacity AI -->
+            <div class="site-card" data-category="kurse">
+                <div class="site-icon">🎮</div>
+                <h2 class="site-title">Udacity AI Nanodegrees</h2>
+                <span class="site-category">Online Kurse</span>
+                <p class="site-description">Praxisorientierte Nanodegree Programme für AI und Machine Learning mit Projekt-basierten Lernen.</p>
+                <a href="https://www.udacity.com/school-of-ai" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- edX AI -->
+            <div class="site-card" data-category="kurse">
+                <div class="site-icon">🎓</div>
+                <h2 class="site-title">edX AI Courses</h2>
+                <span class="site-category">Online Kurse</span>
+                <p class="site-description">Universitäts-Kurse von Harvard, MIT und mehr. Professionelle Zertifikate und MicroMasters.</p>
+                <a href="https://www.edx.org/learn/artificial-intelligence" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- LangChain -->
+            <div class="site-card" data-category="platform">
+                <div class="site-icon">⛓️</div>
+                <h2 class="site-title">LangChain</h2>
+                <span class="site-category">Platform & API</span>
+                <p class="site-description">Framework für die Entwicklung von LLM-Anwendungen. Perfekt für praktische AI-App-Entwicklung.</p>
+                <a href="https://www.langchain.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Anthropic Claude -->
+            <div class="site-card" data-category="platform">
+                <div class="site-icon">🔮</div>
+                <h2 class="site-title">Anthropic Claude</h2>
+                <span class="site-category">Platform & API</span>
+                <p class="site-description">Sicherer AI-Assistent mit verfügbarer API. Fokus auf hilfreiche und sichere AI-Systeme.</p>
+                <a href="https://www.anthropic.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- PyTorch Tutorials -->
+            <div class="site-card" data-category="praxis">
+                <div class="site-icon">🔥</div>
+                <h2 class="site-title">PyTorch Tutorials</h2>
+                <span class="site-category">Praktisches Lernen</span>
+                <p class="site-description">Offizielle PyTorch Dokumentation und Tutorials. Für Deep Learning Implementierungen.</p>
+                <a href="https://pytorch.org/tutorials/" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- TensorFlow -->
+            <div class="site-card" data-category="praxis">
+                <div class="site-icon">🧮</div>
+                <h2 class="site-title">TensorFlow</h2>
+                <span class="site-category">Praktisches Lernen</span>
+                <p class="site-description">Google's ML-Plattform mit umfassenden Tutorials und Guides für alle Niveaus.</p>
+                <a href="https://www.tensorflow.org/learn" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- AI Alignment Forum -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">🎯</div>
+                <h2 class="site-title">AI Alignment Forum</h2>
+                <span class="site-category">Forschung</span>
+                <p class="site-description">Diskussionen über AI Safety, Alignment und die Zukunft künstlicher Intelligenz.</p>
+                <a href="https://www.alignmentforum.org" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Google Colab -->
+            <div class="site-card" data-category="community">
+                <div class="site-icon">💻</div>
+                <h2 class="site-title">Google Colab</h2>
+                <span class="site-category">Community & Tools</span>
+                <span class="badge">Kostenlos</span>
+                <p class="site-description">Kostenlose Jupyter Notebooks in der Cloud mit GPU-Zugriff. Ideal für ML-Experimente.</p>
+                <a href="https://colab.research.google.com" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Stanford AI Lab -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">🔬</div>
+                <h2 class="site-title">Stanford AI Lab (SAIL)</h2>
+                <span class="site-category">Forschung</span>
+                <p class="site-description">Führendes AI-Forschungslabor mit wegweisenden Projekten und Publikationen.</p>
+                <a href="https://ai.stanford.edu" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Khan Academy AI -->
+            <div class="site-card" data-category="einsteiger">
+                <div class="site-icon">📚</div>
+                <h2 class="site-title">Khan Academy - AI & ML</h2>
+                <span class="site-category">Einsteiger</span>
+                <span class="badge">Kostenlos</span>
+                <p class="site-description">Kostenlose Einführungskurse in AI und Machine Learning für absolute Anfänger.</p>
+                <a href="https://www.khanacademy.org/computing/computer-science" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- 3Blue1Brown -->
+            <div class="site-card" data-category="einsteiger">
+                <div class="site-icon">🎬</div>
+                <h2 class="site-title">3Blue1Brown Neural Networks</h2>
+                <span class="site-category">Einsteiger</span>
+                <p class="site-description">Visuell beeindruckende Video-Serie über neuronale Netze und Deep Learning Konzepte.</p>
+                <a href="https://www.3blue1brown.com/topics/neural-networks" class="site-link" target="_blank" rel="noopener">Besuchen</a>
+            </div>
+
+            <!-- Distill.pub -->
+            <div class="site-card" data-category="forschung">
+                <div class="site-icon">📐</div>
+                <h2 class="site-title">Distill</h2>
+                <span class="site-category">Forschung</span>
+                <p class="site-description">Interaktive Machine Learning Artikel mit klaren visuellen Erklärungen.</p>
+                <a href="https://distill.pub" class="site-link" target="_blank" rel="noopener">Besuchen</a>
             </div>
         </div>
     </div>
@@ -379,5 +553,54 @@
         <p class="footer-text">🤖 Kuratierte Liste der besten AI-Lernressourcen · 2024</p>
         <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.8rem;">Bleib neugierig und lerne weiter!</p>
     </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const siteCards = document.querySelectorAll('.site-card');
+        const siteCountElement = document.getElementById('site-count');
+
+        function updateSiteCount() {
+            const visibleCards = document.querySelectorAll('.site-card:not(.hidden)');
+            siteCountElement.textContent = visibleCards.length;
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                // Filter cards
+                siteCards.forEach(card => {
+                    if (category === 'alle') {
+                        card.classList.remove('hidden');
+                    } else {
+                        if (card.getAttribute('data-category') === category) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+
+                // Update count
+                updateSiteCount();
+                
+                // Scroll to grid smoothly
+                document.querySelector('.sites-grid').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            });
+        });
+
+        // Initialize count
+        updateSiteCount();
+    </script>
 </body>
 </html>
