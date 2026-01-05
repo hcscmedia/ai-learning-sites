@@ -31,7 +31,7 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
   - Audio & Musik (Suno AI, ElevenLabs)
   - Code-Assistenten (GitHub Copilot, Cursor)
 
-- 💎 **Kostenlose KI-Anbieter**: Über 20 komplett kostenlose KI-Tools
+- 💎 **Kostenlose KI-Anbieter**: Über 40 komplett kostenlose KI-Tools
   - Text & Chat KI ohne Kosten
   - Bildbearbeitung & Generierung
   - Video & Audio Tools
@@ -205,7 +205,7 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 
 - **20+** Lernplattformen
 - **40+** KI-Modelle und Tools
-- **20+** Kostenlose KI-Anbieter
+- **40+** Kostenlose KI-Anbieter
 - **7** Hauptseiten (News, Lernen, Modelle, Anbieter, Prompts, Über, Impressum)
 - **6** Aktuelle KI-Nachrichten
 - **8** Prompt-Kategorien
