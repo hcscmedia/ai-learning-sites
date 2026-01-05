@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Die besten Webseiten zum KI / AI Lernen">
+    <title>KI Lernen - Die besten Ressourcen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --background-color: #0f172a;
+            --card-background: #1e293b;
+            --text-color: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --accent-color: #22d3ee;
+            --hover-color: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--background-color) 0%, #1e293b 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header-content {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .site-card {
+            background: var(--card-background);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--primary-color);
+        }
+
+        .site-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .site-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            flex-shrink: 0;
+        }
+
+        .site-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .site-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .site-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--accent-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .site-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .site-link:hover {
+            color: var(--accent-color);
+            gap: 0.75rem;
+        }
+
+        .site-link::after {
+            content: '→';
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-icon {
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .header-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .sites-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .header-content {
+                padding: 1.5rem 1rem;
+                border-radius: 16px;
+            }
+
+            .site-card {
+                padding: 1.25rem;
+            }
+        }
+
+        /* Loading animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .site-card {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .site-card:nth-child(1) { animation-delay: 0.1s; }
+        .site-card:nth-child(2) { animation-delay: 0.2s; }
+        .site-card:nth-child(3) { animation-delay: 0.3s; }
+        .site-card:nth-child(4) { animation-delay: 0.4s; }
+        .site-card:nth-child(5) { animation-delay: 0.5s; }
+        .site-card:nth-child(6) { animation-delay: 0.6s; }
+        .site-card:nth-child(7) { animation-delay: 0.7s; }
+        .site-card:nth-child(8) { animation-delay: 0.8s; }
+        .site-card:nth-child(9) { animation-delay: 0.9s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🤖 KI Lernen</h1>
+                <p class="subtitle">Die besten Ressourcen & Webseiten für Künstliche Intelligenz</p>
+            </div>
+        </header>
+
+        <div class="intro">
+            <p>Entdecke die führenden Plattformen und Ressourcen, um Künstliche Intelligenz zu lernen - von Grundlagen bis zu fortgeschrittenen Techniken.</p>
+        </div>
+
+        <div class="sites-grid">
+            <!-- OpenAI -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">🎯</div>
+                    <h2 class="site-title">OpenAI</h2>
+                </div>
+                <p class="site-description">
+                    Die offizielle Plattform von OpenAI mit umfangreicher Dokumentation, API-Referenzen und Tutorials zu GPT, DALL-E und anderen KI-Modellen.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">API</span>
+                    <span class="tag">GPT</span>
+                    <span class="tag">Dokumentation</span>
+                </div>
+                <a href="https://platform.openai.com/docs" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- Fast.ai -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">⚡</div>
+                    <h2 class="site-title">Fast.ai</h2>
+                </div>
+                <p class="site-description">
+                    Kostenlose, praxisorientierte Kurse für Deep Learning. Perfekt für Einsteiger und Fortgeschrittene mit praktischen Code-Beispielen.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">Kurse</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Kostenlos</span>
+                </div>
+                <a href="https://www.fast.ai/" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- Coursera AI Courses -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">🎓</div>
+                    <h2 class="site-title">Coursera AI</h2>
+                </div>
+                <p class="site-description">
+                    Hochwertige Kurse von Top-Universitäten wie Stanford und deeplearning.ai. Zertifikate und strukturiertes Lernen mit Andrew Ng.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">Zertifikate</span>
+                    <span class="tag">Universitäten</span>
+                    <span class="tag">Strukturiert</span>
+                </div>
+                <a href="https://www.coursera.org/courses?query=artificial%20intelligence" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- DeepLearning.AI -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">🧠</div>
+                    <h2 class="site-title">DeepLearning.AI</h2>
+                </div>
+                <p class="site-description">
+                    Von Andrew Ng gegründete Plattform mit spezialisierten Kursen zu Neural Networks, TensorFlow, PyTorch und mehr.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">Neural Networks</span>
+                    <span class="tag">TensorFlow</span>
+                    <span class="tag">Experten</span>
+                </div>
+                <a href="https://www.deeplearning.ai/" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- Hugging Face -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">🤗</div>
+                    <h2 class="site-title">Hugging Face</h2>
+                </div>
+                <p class="site-description">
+                    Die größte Community-Plattform für Machine Learning mit tausenden von Modellen, Datasets und interaktiven Tutorials.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">Models</span>
+                    <span class="tag">Community</span>
+                    <span class="tag">NLP</span>
+                </div>
+                <a href="https://huggingface.co/learn" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- Google AI -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">🔬</div>
+                    <h2 class="site-title">Google AI</h2>
+                </div>
+                <p class="site-description">
+                    Googles Machine Learning Crash Course und Ressourcen zu TensorFlow, Vertex AI und modernsten KI-Forschungsergebnissen.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">TensorFlow</span>
+                    <span class="tag">Forschung</span>
+                    <span class="tag">Tools</span>
+                </div>
+                <a href="https://ai.google/education/" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- MIT OpenCourseWare AI -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">🏛️</div>
+                    <h2 class="site-title">MIT OpenCourseWare</h2>
+                </div>
+                <p class="site-description">
+                    Kostenloser Zugang zu MIT-Kursmaterialien für Künstliche Intelligenz, Machine Learning und verwandte Themen.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">Akademisch</span>
+                    <span class="tag">Kostenlos</span>
+                    <span class="tag">Vollständig</span>
+                </div>
+                <a href="https://ocw.mit.edu/search/?q=artificial%20intelligence" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- Kaggle Learn -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">📊</div>
+                    <h2 class="site-title">Kaggle Learn</h2>
+                </div>
+                <p class="site-description">
+                    Interaktive Micro-Kurse mit praktischen Übungen. Lerne AI & Machine Learning direkt im Browser mit echten Datasets.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">Praxis</span>
+                    <span class="tag">Datasets</span>
+                    <span class="tag">Interaktiv</span>
+                </div>
+                <a href="https://www.kaggle.com/learn" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+
+            <!-- Papers With Code -->
+            <div class="site-card">
+                <div class="site-header">
+                    <div class="site-icon">📄</div>
+                    <h2 class="site-title">Papers With Code</h2>
+                </div>
+                <p class="site-description">
+                    Entdecke die neuesten AI-Forschungspapiere mit dazugehörigem Code. Perfekt, um State-of-the-Art Methoden zu lernen.
+                </p>
+                <div class="site-tags">
+                    <span class="tag">Forschung</span>
+                    <span class="tag">Code</span>
+                    <span class="tag">Aktuell</span>
+                </div>
+                <a href="https://paperswithcode.com/" class="site-link" target="_blank" rel="noopener">
+                    Zur Webseite
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Zusammengestellt mit <span class="footer-icon">❤️</span> für die KI-Community</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7;">© 2026 - Ständig aktualisiert</p>
+        </footer>
+    </div>
+</body>
+</html>
