@@ -3269,3 +3269,404 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===========================
+   TECH TABS IN INTRO
+   =========================== */
+.tech-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin: var(--spacing-lg) 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.tech-tab-btn {
+    background: var(--background);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tech-tab-btn:hover {
+    background: var(--background-lighter);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.tech-tab-btn.active {
+    background: var(--gradient-1);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.tech-tab-content {
+    display: none;
+    padding: var(--spacing-lg) 0;
+    animation: fadeIn 0.5s ease;
+}
+
+.tech-tab-content.active {
+    display: block;
+}
+
+.tech-detail {
+    background: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+}
+
+.tech-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.tech-header h6 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.tech-badge {
+    background: var(--gradient-1);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.tech-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.tech-features h6,
+.tech-use-cases h6 {
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+}
+
+.tech-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-features li {
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.tech-features li:before {
+    content: "▸";
+    color: var(--primary-light);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.use-case-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--spacing-sm);
+}
+
+.use-case-pill {
+    background: var(--background);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.use-case-pill:hover {
+    border-color: var(--primary-color);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.tech-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.tech-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.625rem 1.25rem;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tech-link-btn:hover {
+    background: var(--gradient-1);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===========================
+   RESPONSIVE - TECH TABS
+   =========================== */
+@media (max-width: 768px) {
+    .tech-tabs {
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    
+    .tech-tab-btn {
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .tech-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .tech-header h6 {
+        font-size: 1.25rem;
+    }
+    
+    .tech-links {
+        flex-direction: column;
+    }
+    
+    .tech-link-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Tech Tabs in Intro */
+.tech-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin: var(--spacing-lg) 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.tech-tab-btn {
+    background: var(--background);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tech-tab-btn:hover {
+    background: var(--background-lighter);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.tech-tab-btn.active {
+    background: var(--gradient-1);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.tech-tab-content {
+    display: none;
+    padding: var(--spacing-lg) 0;
+    animation: fadeIn 0.5s ease;
+}
+
+.tech-tab-content.active {
+    display: block;
+}
+
+.tech-detail {
+    background: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+}
+
+.tech-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.tech-header h6 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.tech-badge {
+    background: var(--gradient-1);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.tech-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.tech-features h6,
+.tech-use-cases h6 {
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+}
+
+.tech-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-features li {
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.tech-features li:before {
+    content: "▸";
+    color: var(--primary-light);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.use-case-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--spacing-sm);
+}
+
+.use-case-pill {
+    background: var(--background);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.use-case-pill:hover {
+    border-color: var(--primary-color);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.tech-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.tech-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.625rem 1.25rem;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tech-link-btn:hover {
+    background: var(--gradient-1);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+    .tech-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    
+    .tech-tab-btn {
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .tech-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .tech-header h6 {
+        font-size: 1.25rem;
+    }
+    
+    .tech-links {
+        flex-direction: column;
+    }
+    
+    .tech-link-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

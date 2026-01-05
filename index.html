@@ -85,13 +85,243 @@
 
                         <div class="tech-stack">
                             <h5>🛠️ Wichtige Technologien:</h5>
-                            <div class="tech-tags">
-                                <span class="tech-tag"><a href="#tensorflow" class="internal-link">TensorFlow</a></span>
-                                <span class="tech-tag"><a href="#pytorch" class="internal-link">PyTorch</a></span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">CUDA</span>
-                                <span class="tech-tag">NumPy</span>
-                                <span class="tech-tag">Pandas</span>
+                            
+                            <!-- Tech Tabs Navigation -->
+                            <div class="tech-tabs">
+                                <button class="tech-tab-btn active" data-tech="tensorflow">TensorFlow</button>
+                                <button class="tech-tab-btn" data-tech="pytorch">PyTorch</button>
+                                <button class="tech-tab-btn" data-tech="python">Python</button>
+                                <button class="tech-tab-btn" data-tech="cuda">CUDA</button>
+                                <button class="tech-tab-btn" data-tech="numpy">NumPy</button>
+                                <button class="tech-tab-btn" data-tech="pandas">Pandas</button>
+                            </div>
+
+                            <!-- TensorFlow Tab -->
+                            <div class="tech-tab-content active" data-tech="tensorflow">
+                                <div class="tech-detail">
+                                    <div class="tech-header">
+                                        <h6>🔶 TensorFlow</h6>
+                                        <span class="tech-badge">v2.15+</span>
+                                    </div>
+                                    <p class="tech-description">Open-Source Machine Learning Framework von Google Brain. Die umfassendste Plattform für ML-Entwicklung - vom Training bis zur Production-Deployment.</p>
+                                    
+                                    <div class="tech-features">
+                                        <h6>Hauptmerkmale:</h6>
+                                        <ul>
+                                            <li><strong>Keras Integration:</strong> High-level API für schnelles Prototyping</li>
+                                            <li><strong>TensorFlow Lite:</strong> Optimiert für Mobile & Edge Devices</li>
+                                            <li><strong>TensorFlow.js:</strong> ML direkt im Browser ausführen</li>
+                                            <li><strong>TensorBoard:</strong> Visualisierung von Training & Modellen</li>
+                                            <li><strong>Production-Ready:</strong> TensorFlow Serving für skalierbare Deployments</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tech-use-cases">
+                                        <h6>Anwendungsfälle:</h6>
+                                        <div class="use-case-pills">
+                                            <span class="use-case-pill">Computer Vision</span>
+                                            <span class="use-case-pill">NLP</span>
+                                            <span class="use-case-pill">Time Series</span>
+                                            <span class="use-case-pill">Reinforcement Learning</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tech-links">
+                                        <a href="https://www.tensorflow.org/" target="_blank" class="tech-link-btn">🌐 Website</a>
+                                        <a href="https://www.tensorflow.org/learn" target="_blank" class="tech-link-btn">📚 Docs</a>
+                                        <a href="https://github.com/tensorflow/tensorflow" target="_blank" class="tech-link-btn">💻 GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PyTorch Tab -->
+                            <div class="tech-tab-content" data-tech="pytorch">
+                                <div class="tech-detail">
+                                    <div class="tech-header">
+                                        <h6>🔥 PyTorch</h6>
+                                        <span class="tech-badge">v2.1+</span>
+                                    </div>
+                                    <p class="tech-description">Deep Learning Framework von Meta AI Research. Bevorzugt in der Forschung dank dynamischer Computation Graphs und pythonischer Syntax.</p>
+                                    
+                                    <div class="tech-features">
+                                        <h6>Hauptmerkmale:</h6>
+                                        <ul>
+                                            <li><strong>Dynamic Graphs:</strong> Flexible Modellarchitekturen zur Laufzeit</li>
+                                            <li><strong>TorchScript:</strong> Optimierung für Production</li>
+                                            <li><strong>Distributed Training:</strong> Multi-GPU & Multi-Node Support</li>
+                                            <li><strong>PyTorch Lightning:</strong> High-level Wrapper für cleanen Code</li>
+                                            <li><strong>ONNX Export:</strong> Interoperabilität mit anderen Frameworks</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tech-use-cases">
+                                        <h6>Anwendungsfälle:</h6>
+                                        <div class="use-case-pills">
+                                            <span class="use-case-pill">Research</span>
+                                            <span class="use-case-pill">GANs</span>
+                                            <span class="use-case-pill">Transformer</span>
+                                            <span class="use-case-pill">LLMs</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tech-links">
+                                        <a href="https://pytorch.org/" target="_blank" class="tech-link-btn">🌐 Website</a>
+                                        <a href="https://pytorch.org/docs/" target="_blank" class="tech-link-btn">📚 Docs</a>
+                                        <a href="https://github.com/pytorch/pytorch" target="_blank" class="tech-link-btn">💻 GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Python Tab -->
+                            <div class="tech-tab-content" data-tech="python">
+                                <div class="tech-detail">
+                                    <div class="tech-header">
+                                        <h6>🐍 Python</h6>
+                                        <span class="tech-badge">v3.9+</span>
+                                    </div>
+                                    <p class="tech-description">Die dominierende Programmiersprache für KI und Data Science. Einfache Syntax, riesiges Ökosystem und breite Community-Unterstützung.</p>
+                                    
+                                    <div class="tech-features">
+                                        <h6>Warum Python für KI?</h6>
+                                        <ul>
+                                            <li><strong>Einfach zu lernen:</strong> Klare, lesbare Syntax ideal für Anfänger</li>
+                                            <li><strong>Riesige Bibliotheken:</strong> NumPy, Pandas, Scikit-learn, Matplotlib</li>
+                                            <li><strong>Framework-Support:</strong> TensorFlow, PyTorch, JAX, Keras</li>
+                                            <li><strong>Jupyter Notebooks:</strong> Interaktive Entwicklung & Visualisierung</li>
+                                            <li><strong>Community:</strong> Größte ML-Community weltweit</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tech-use-cases">
+                                        <h6>Essenzielle Packages:</h6>
+                                        <div class="use-case-pills">
+                                            <span class="use-case-pill">NumPy</span>
+                                            <span class="use-case-pill">Pandas</span>
+                                            <span class="use-case-pill">Matplotlib</span>
+                                            <span class="use-case-pill">Scikit-learn</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tech-links">
+                                        <a href="https://www.python.org/" target="_blank" class="tech-link-btn">🌐 Website</a>
+                                        <a href="https://docs.python.org/" target="_blank" class="tech-link-btn">📚 Docs</a>
+                                        <a href="lernplattformen.html" class="tech-link-btn">🎓 Python lernen</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CUDA Tab -->
+                            <div class="tech-tab-content" data-tech="cuda">
+                                <div class="tech-detail">
+                                    <div class="tech-header">
+                                        <h6>⚡ CUDA</h6>
+                                        <span class="tech-badge">v12.0+</span>
+                                    </div>
+                                    <p class="tech-description">Compute Unified Device Architecture von NVIDIA. Ermöglicht GPU-beschleunigtes Computing für massive Performance-Steigerungen beim ML-Training.</p>
+                                    
+                                    <div class="tech-features">
+                                        <h6>Hauptmerkmale:</h6>
+                                        <ul>
+                                            <li><strong>GPU-Acceleration:</strong> 10-100x schnelleres Training als CPU</li>
+                                            <li><strong>cuDNN:</strong> Optimierte Primitives für Deep Neural Networks</li>
+                                            <li><strong>Tensor Cores:</strong> Spezial-Hardware für Matrix-Operationen</li>
+                                            <li><strong>Multi-GPU:</strong> Parallel Training auf mehreren GPUs</li>
+                                            <li><strong>Framework Integration:</strong> TensorFlow, PyTorch nutzen CUDA automatisch</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tech-use-cases">
+                                        <h6>Performance-Boost:</h6>
+                                        <div class="use-case-pills">
+                                            <span class="use-case-pill">Deep Learning</span>
+                                            <span class="use-case-pill">Large Models</span>
+                                            <span class="use-case-pill">Computer Vision</span>
+                                            <span class="use-case-pill">Inference</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tech-links">
+                                        <a href="https://developer.nvidia.com/cuda-toolkit" target="_blank" class="tech-link-btn">🌐 CUDA Toolkit</a>
+                                        <a href="https://docs.nvidia.com/cuda/" target="_blank" class="tech-link-btn">📚 Docs</a>
+                                        <a href="https://developer.nvidia.com/cudnn" target="_blank" class="tech-link-btn">⚙️ cuDNN</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- NumPy Tab -->
+                            <div class="tech-tab-content" data-tech="numpy">
+                                <div class="tech-detail">
+                                    <div class="tech-header">
+                                        <h6>🔢 NumPy</h6>
+                                        <span class="tech-badge">v1.24+</span>
+                                    </div>
+                                    <p class="tech-description">Numerical Python - Die Grundlage für wissenschaftliches Computing in Python. Effiziente mehrdimensionale Arrays und mathematische Funktionen.</p>
+                                    
+                                    <div class="tech-features">
+                                        <h6>Hauptmerkmale:</h6>
+                                        <ul>
+                                            <li><strong>N-dimensionale Arrays:</strong> Effiziente Speicherung & Verarbeitung</li>
+                                            <li><strong>Vectorization:</strong> Operationen auf ganzen Arrays statt Loops</li>
+                                            <li><strong>Broadcasting:</strong> Automatische Array-Dimensionen-Anpassung</li>
+                                            <li><strong>Lineare Algebra:</strong> Matrix-Operationen, Eigenwerte, SVD</li>
+                                            <li><strong>Performance:</strong> C-implementiert, bis zu 100x schneller als Python Lists</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tech-use-cases">
+                                        <h6>Verwendung in:</h6>
+                                        <div class="use-case-pills">
+                                            <span class="use-case-pill">Data Preprocessing</span>
+                                            <span class="use-case-pill">Feature Engineering</span>
+                                            <span class="use-case-pill">Matrix Operations</span>
+                                            <span class="use-case-pill">Neural Networks</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tech-links">
+                                        <a href="https://numpy.org/" target="_blank" class="tech-link-btn">🌐 Website</a>
+                                        <a href="https://numpy.org/doc/" target="_blank" class="tech-link-btn">📚 Docs</a>
+                                        <a href="https://github.com/numpy/numpy" target="_blank" class="tech-link-btn">💻 GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pandas Tab -->
+                            <div class="tech-tab-content" data-tech="pandas">
+                                <div class="tech-detail">
+                                    <div class="tech-header">
+                                        <h6>🐼 Pandas</h6>
+                                        <span class="tech-badge">v2.0+</span>
+                                    </div>
+                                    <p class="tech-description">Python Data Analysis Library. Das ultimative Tool für Datenmanipulation, -analyse und -bereinigung. Unverzichtbar für Data Science.</p>
+                                    
+                                    <div class="tech-features">
+                                        <h6>Hauptmerkmale:</h6>
+                                        <ul>
+                                            <li><strong>DataFrame:</strong> 2D-Datenstruktur ähnlich Excel/SQL-Tabellen</li>
+                                            <li><strong>Data Cleaning:</strong> Missing Values, Duplicates, Type Conversion</li>
+                                            <li><strong>Aggregation:</strong> GroupBy, Pivot Tables, Time Series</li>
+                                            <li><strong>I/O:</strong> CSV, Excel, SQL, JSON, Parquet Import/Export</li>
+                                            <li><strong>Integration:</strong> Nahtlose Kombination mit NumPy, Matplotlib, Scikit-learn</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tech-use-cases">
+                                        <h6>Typische Aufgaben:</h6>
+                                        <div class="use-case-pills">
+                                            <span class="use-case-pill">Data Loading</span>
+                                            <span class="use-case-pill">EDA</span>
+                                            <span class="use-case-pill">Feature Creation</span>
+                                            <span class="use-case-pill">Data Wrangling</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="tech-links">
+                                        <a href="https://pandas.pydata.org/" target="_blank" class="tech-link-btn">🌐 Website</a>
+                                        <a href="https://pandas.pydata.org/docs/" target="_blank" class="tech-link-btn">📚 Docs</a>
+                                        <a href="https://github.com/pandas-dev/pandas" target="_blank" class="tech-link-btn">💻 GitHub</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -662,6 +892,27 @@
                     // Füge active Klasse hinzu
                     this.classList.add('active');
                     const targetContent = document.querySelector(`.intro-tab-content[data-intro-tab="${tab}"]`);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // Tech-Tabs Funktionalität
+            const techTabButtons = document.querySelectorAll('.tech-tab-btn');
+            const techTabContents = document.querySelectorAll('.tech-tab-content');
+
+            techTabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tech = this.getAttribute('data-tech');
+
+                    // Entferne active Klasse
+                    techTabButtons.forEach(btn => btn.classList.remove('active'));
+                    techTabContents.forEach(content => content.classList.remove('active'));
+
+                    // Füge active Klasse hinzu
+                    this.classList.add('active');
+                    const targetContent = document.querySelector(`.tech-tab-content[data-tech="${tech}"]`);
                     if (targetContent) {
                         targetContent.classList.add('active');
                     }
