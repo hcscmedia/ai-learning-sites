@@ -15,6 +15,7 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
 
 - 📰 **KI-Nachrichten**: Aktuelle News und Updates aus der KI-Welt
   - Kategorisiert nach: Modelle, Produkte, Forschung, Regulierung, Business
+  - Tab-Navigation für übersichtliche Darstellung
   - Neueste Entwicklungen von OpenAI, Google, Anthropic, Meta
   - Durchbrüche in Forschung und Technologie
   - Regulierungen und Richtlinien
@@ -49,6 +50,13 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
   - Kopieren, Bearbeiten und Löschen von Prompts
   - LocalStorage-basierte Speicherung
   - Tags und Notizen für bessere Organisation
+
+- 🎁 **Angebote & Rabatte**: Sparen Sie bei KI-Tools und Lernplattformen
+  - Aktuelle Deals für Lernplattformen (Coursera, DataCamp, GitHub)
+  - KI-Tools Angebote (ChatGPT, Midjourney, Notion AI)
+  - Cloud Credits (Google Cloud, Azure, Hugging Face)
+  - Tipps zum Sparen mit Student Deals und Free Tiers
+  - Regelmäßig aktualisierte Angebote
   
 - 💡 **Wissensbereich**: Detaillierte Informationen zu
   - Machine Learning & Deep Learning
@@ -56,6 +64,7 @@ Das KI/AI Portal ist eine übersichtliche Webseite, die alle wichtigen Informati
   - Computer Vision
   - Generative AI
   - KI-Frameworks und Tools
+  - Verlinkte Begriffserklärungen für einfache Navigation
   
 - 🎨 **Modernes Design**
   - Responsive Design für alle Geräte
@@ -120,11 +129,12 @@ Das Projekt ist bereits für GitHub Pages konfiguriert und kann direkt genutzt w
 
 ```
 ai-learning-sites/
-├── index.html              # Hauptseite mit KI-Übersicht und News
+├── index.html              # Hauptseite mit KI-Übersicht und News (mit Tab-Navigation)
 ├── lernplattformen.html    # Seite mit Lernplattformen
 ├── ki-modelle.html         # Seite mit KI-Modellen
 ├── ki-anbieter.html        # Kostenlose KI-Anbieter
 ├── prompts.html            # Prompt-Bibliothek und Verwaltung
+├── angebote.html           # Angebote und Rabatte für KI-Tools
 ├── about.html              # Über das Projekt
 ├── impressum.html          # Impressum und rechtliche Hinweise
 ├── styles.css              # Styling für alle Seiten
@@ -211,8 +221,9 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 - **30+** Lernplattformen
 - **40+** KI-Modelle und Tools
 - **40+** Kostenlose KI-Anbieter
-- **18** Aktuelle KI-Nachrichten (5 Kategorien)
-- **7** Hauptseiten (News, Lernen, Modelle, Anbieter, Prompts, Über, Impressum)
+- **18** Aktuelle KI-Nachrichten (5 Kategorien mit Tab-Navigation)
+- **8** Hauptseiten (News, Lernen, Modelle, Anbieter, Prompts, Angebote, Über, Impressum)
+- **10+** Aktuelle Angebote und Rabatte
 - **8** Prompt-Kategorien
 - **100%** Responsive Design
 - **LocalStorage** für persistente Datenspeicherung

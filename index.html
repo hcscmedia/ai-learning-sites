@@ -19,6 +19,7 @@
                     <li><a href="ki-modelle.html">KI-Modelle</a></li>
                     <li><a href="ki-anbieter.html">KI-Anbieter</a></li>
                     <li><a href="prompts.html">Prompts</a></li>
+                    <li><a href="angebote.html">Angebote</a></li>
                 </ul>
             </div>
         </nav>
@@ -59,9 +60,17 @@
                 <h3>📰 Aktuelle KI-Nachrichten - Januar 2026</h3>
                 <p class="news-intro">Die neuesten Entwicklungen aus der KI-Welt, übersichtlich nach Kategorien sortiert</p>
                 
+                <!-- Tab Navigation -->
+                <div class="news-tabs">
+                    <button class="tab-btn active" data-category="modelle">🤖 Modelle & Updates</button>
+                    <button class="tab-btn" data-category="produkte">🚀 Produkte & Tools</button>
+                    <button class="tab-btn" data-category="forschung">🔬 Forschung</button>
+                    <button class="tab-btn" data-category="regulierung">⚖️ Regulierung</button>
+                    <button class="tab-btn" data-category="business">💼 Business</button>
+                </div>
+                
                 <!-- Kategorie: Neue Modelle & Updates -->
-                <div class="news-category">
-                    <h4 class="category-title">🤖 Neue Modelle & Updates</h4>
+                <div class="news-category tab-content active" data-category="modelle">
                     <div class="news-grid">
                         <article class="news-card">
                             <div class="news-date">05. Januar 2026</div>
@@ -85,8 +94,7 @@
                 </div>
 
                 <!-- Kategorie: Produkte & Tools -->
-                <div class="news-category">
-                    <h4 class="category-title">🚀 Neue Produkte & Tools</h4>
+                <div class="news-category tab-content" data-category="produkte">
                     <div class="news-grid">
                         <article class="news-card">
                             <div class="news-date">04. Januar 2026</div>
@@ -110,8 +118,7 @@
                 </div>
 
                 <!-- Kategorie: Forschung & Durchbrüche -->
-                <div class="news-category">
-                    <h4 class="category-title">🔬 Forschung & Durchbrüche</h4>
+                <div class="news-category tab-content" data-category="forschung">
                     <div class="news-grid">
                         <article class="news-card">
                             <div class="news-date">03. Januar 2026</div>
@@ -135,8 +142,7 @@
                 </div>
 
                 <!-- Kategorie: Regulierung & Politik -->
-                <div class="news-category">
-                    <h4 class="category-title">⚖️ Regulierung & Politik</h4>
+                <div class="news-category tab-content" data-category="regulierung">
                     <div class="news-grid">
                         <article class="news-card">
                             <div class="news-date">02. Januar 2026</div>
@@ -160,8 +166,7 @@
                 </div>
 
                 <!-- Kategorie: Business & Investment -->
-                <div class="news-category">
-                    <h4 class="category-title">💼 Business & Investment</h4>
+                <div class="news-category tab-content" data-category="business">
                     <div class="news-grid">
                         <article class="news-card">
                             <div class="news-date">04. Januar 2026</div>
@@ -207,10 +212,22 @@
                         <a href="ki-modelle.html" class="btn">Modelle erkunden</a>
                     </div>
                     <div class="feature-card">
+                        <div class="feature-icon">🆓</div>
+                        <h4>Kostenlose KI-Anbieter</h4>
+                        <p>Entdecken Sie 40+ komplett kostenlose KI-Tools für Text, Bild, Video und mehr</p>
+                        <a href="ki-anbieter.html" class="btn">Anbieter entdecken</a>
+                    </div>
+                    <div class="feature-card">
                         <div class="feature-icon">✍️</div>
                         <h4>Prompt-Bibliothek</h4>
                         <p>Speichern und verwalten Sie Ihre besten Prompts für verschiedene KI-Modelle</p>
                         <a href="prompts.html" class="btn">Prompts verwalten</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎁</div>
+                        <h4>Angebote & Rabatte</h4>
+                        <p>Sparen Sie bei KI-Tools und Lernplattformen - Die besten Deals im Überblick</p>
+                        <a href="angebote.html" class="btn">Zu den Angeboten</a>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">💡</div>
@@ -225,68 +242,68 @@
         <section class="info-sections" id="resources">
             <div class="container">
                 <div class="info-grid">
-                    <div class="info-box">
+                    <div class="info-box" id="machine-learning">
                         <h4>🧠 Machine Learning</h4>
                         <p>Machine Learning (ML) ist ein Teilbereich der KI, bei dem Computersysteme aus Daten lernen, ohne explizit programmiert zu werden. Es gibt verschiedene Arten:</p>
                         <ul>
-                            <li><strong>Supervised Learning:</strong> Lernen mit beschrifteten Daten</li>
-                            <li><strong>Unsupervised Learning:</strong> Mustererkennung in unbeschrifteten Daten</li>
-                            <li><strong>Reinforcement Learning:</strong> Lernen durch Belohnungssysteme</li>
+                            <li id="supervised-learning"><strong>Supervised Learning:</strong> Lernen mit beschrifteten Daten - Der Algorithmus lernt aus Beispielen mit bekannten Ergebnissen (z.B. Spam-Erkennung, Bildklassifizierung)</li>
+                            <li id="unsupervised-learning"><strong>Unsupervised Learning:</strong> Mustererkennung in unbeschrifteten Daten - Entdeckt verborgene Strukturen ohne vorgegebene Kategorien (z.B. Clustering, Anomalie-Erkennung)</li>
+                            <li id="reinforcement-learning"><strong>Reinforcement Learning:</strong> Lernen durch Belohnungssysteme - Agent lernt durch Trial-and-Error mit Feedback (z.B. Spielstrategien, Robotersteuerung)</li>
                         </ul>
                     </div>
 
-                    <div class="info-box">
+                    <div class="info-box" id="deep-learning">
                         <h4>🔮 Deep Learning</h4>
-                        <p>Deep Learning nutzt künstliche neuronale Netze mit vielen Schichten, um komplexe Muster zu erkennen. Anwendungen:</p>
+                        <p>Deep Learning nutzt künstliche neuronale Netze mit vielen Schichten (daher "Deep"), um komplexe Muster zu erkennen. Basiert auf <a href="#machine-learning" class="internal-link">Machine Learning</a> Prinzipien. Anwendungen:</p>
                         <ul>
-                            <li>Bild- und Spracherkennung</li>
-                            <li>Natürliche Sprachverarbeitung (NLP)</li>
-                            <li>Autonomes Fahren</li>
-                            <li>Medizinische Diagnose</li>
+                            <li id="image-recognition"><strong>Bild- und Spracherkennung:</strong> Convolutional Neural Networks (CNNs) für visuelle Daten, Recurrent Neural Networks (RNNs) für Sequenzen</li>
+                            <li><strong>Natürliche Sprachverarbeitung (<a href="#nlp" class="internal-link">NLP</a>):</strong> Transformer-Modelle wie BERT, GPT für Text</li>
+                            <li id="autonomous-driving"><strong>Autonomes Fahren:</strong> Objekterkennung, Pfadplanung und Entscheidungsfindung in Echtzeit</li>
+                            <li id="medical-diagnosis"><strong>Medizinische Diagnose:</strong> Analyse von Röntgenbildern, MRT-Scans und Krankheitsprognosen</li>
                         </ul>
                     </div>
 
-                    <div class="info-box">
+                    <div class="info-box" id="nlp">
                         <h4>💬 Natural Language Processing</h4>
-                        <p>NLP ermöglicht Computern das Verstehen, Interpretieren und Generieren menschlicher Sprache:</p>
+                        <p>NLP ermöglicht Computern das Verstehen, Interpretieren und Generieren menschlicher Sprache. Basiert auf <a href="#deep-learning" class="internal-link">Deep Learning</a> Techniken:</p>
                         <ul>
-                            <li>Chatbots und virtuelle Assistenten</li>
-                            <li>Übersetzungsdienste</li>
-                            <li>Textanalyse und Sentimentanalyse</li>
-                            <li>Textgenerierung und Zusammenfassung</li>
+                            <li id="chatbots"><strong>Chatbots und virtuelle Assistenten:</strong> <a href="#llms" class="internal-link">Large Language Models</a> wie GPT, Claude für kontextbezogene Konversationen</li>
+                            <li id="translation"><strong>Übersetzungsdienste:</strong> Neuronale Maschinelle Übersetzung (NMT) für 100+ Sprachen</li>
+                            <li id="sentiment-analysis"><strong>Textanalyse und Sentimentanalyse:</strong> Erkennung von Emotionen, Meinungen und Intentionen in Texten</li>
+                            <li id="text-generation"><strong>Textgenerierung und Zusammenfassung:</strong> Automatische Content-Erstellung, Abstracts und Paraphrasierung</li>
                         </ul>
                     </div>
 
-                    <div class="info-box">
+                    <div class="info-box" id="computer-vision">
                         <h4>🎨 Computer Vision</h4>
-                        <p>Computer Vision befähigt Computer, digitale Bilder und Videos zu verstehen und zu interpretieren:</p>
+                        <p>Computer Vision befähigt Computer, digitale Bilder und Videos zu verstehen und zu interpretieren. Nutzt <a href="#deep-learning" class="internal-link">Deep Learning</a> und CNNs:</p>
                         <ul>
-                            <li>Gesichts- und Objekterkennung</li>
-                            <li>Bildklassifizierung</li>
-                            <li>Bildgenerierung und -bearbeitung</li>
-                            <li>Medizinische Bildanalyse</li>
+                            <li id="face-recognition"><strong>Gesichts- und Objekterkennung:</strong> YOLO, R-CNN für Echtzeit-Detektion von Personen und Objekten</li>
+                            <li id="image-classification"><strong>Bildklassifizierung:</strong> ResNet, EfficientNet zur Kategorisierung von Bildinhalten</li>
+                            <li id="image-generation"><strong>Bildgenerierung und -bearbeitung:</strong> <a href="#generative-ai" class="internal-link">Generative AI</a> mit Diffusion Models (Stable Diffusion, DALL-E)</li>
+                            <li><strong>Medizinische Bildanalyse:</strong> Erkennung von Tumoren, Frakturen und Anomalien in <a href="#medical-diagnosis" class="internal-link">medizinischen Scans</a></li>
                         </ul>
                     </div>
 
-                    <div class="info-box">
+                    <div class="info-box" id="generative-ai">
                         <h4>🤖 Generative AI</h4>
-                        <p>Generative KI erstellt neue Inhalte basierend auf gelernten Mustern:</p>
+                        <p>Generative KI erstellt neue Inhalte basierend auf gelernten Mustern. Revolution durch Transformer-Architektur und Diffusion Models:</p>
                         <ul>
-                            <li><strong>LLMs:</strong> Large Language Models (GPT, Claude, Gemini)</li>
-                            <li><strong>Bildgenerierung:</strong> DALL-E, Midjourney, Stable Diffusion</li>
-                            <li><strong>Audio:</strong> Musikgenerierung, Sprachsynthese</li>
-                            <li><strong>Video:</strong> KI-generierte Videos</li>
+                            <li id="llms"><strong>LLMs (Large Language Models):</strong> GPT-4, Claude 3, Gemini - Transformer-basierte Modelle mit Milliarden Parametern für <a href="#text-generation" class="internal-link">Textgenerierung</a></li>
+                            <li id="image-gen"><strong>Bildgenerierung:</strong> DALL-E 3, Midjourney, Stable Diffusion nutzen Diffusion Models und GANs für photorealistische Bilder</li>
+                            <li id="audio-gen"><strong>Audio:</strong> Suno, Udio für Musikkomposition, ElevenLabs für realistische Sprachsynthese (Text-to-Speech)</li>
+                            <li id="video-gen"><strong>Video:</strong> Sora, Runway Gen-3, Pika für KI-generierte Videos aus Text- oder Bild-Prompts</li>
                         </ul>
                     </div>
 
-                    <div class="info-box">
-                        <h4>⚙️ KI-Framew id="getting-started"orks & Tools</h4>
-                        <p>Beliebte Frameworks und Tools für KI-Entwicklung:</p>
+                    <div class="info-box" id="frameworks">
+                        <h4>⚙️ KI-Frameworks & Tools</h4>
+                        <p>Beliebte Frameworks und Tools für <a href="#deep-learning" class="internal-link">Deep Learning</a> und <a href="#machine-learning" class="internal-link">Machine Learning</a> Entwicklung:</p>
                         <ul>
-                            <li><strong>TensorFlow:</strong> Google's ML-Framework</li>
-                            <li><strong>PyTorch:</strong> Facebook's Deep Learning Framework</li>
-                            <li><strong>Keras:</strong> High-Level Neural Networks API</li>
-                            <li><strong>Scikit-learn:</strong> ML-Bibliothek für Python</li>
+                            <li id="tensorflow"><strong>TensorFlow:</strong> Google's umfassendes ML-Framework mit Keras API, optimal für Production Deployments</li>
+                            <li id="pytorch"><strong>PyTorch:</strong> Meta's flexibles Deep Learning Framework, bevorzugt in Forschung, dynamische Computation Graphs</li>
+                            <li id="keras"><strong>Keras:</strong> High-Level Neural Networks API, benutzerfreundlich, läuft auf TensorFlow, JAX oder PyTorch</li>
+                            <li id="scikit-learn"><strong>Scikit-learn:</strong> Python ML-Bibliothek für klassisches <a href="#supervised-learning" class="internal-link">Supervised</a> und <a href="#unsupervised-learning" class="internal-link">Unsupervised Learning</a></li>
                         </ul>
                     </div>
                 </div>
@@ -364,5 +381,47 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Tab-Funktionalität für News-Kategorien
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+
+                    // Entferne active Klasse von allen Buttons und Contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Füge active Klasse zum geklickten Button und entsprechendem Content hinzu
+                    this.classList.add('active');
+                    const targetContent = document.querySelector(`.tab-content[data-category="${category}"]`);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // Smooth Scrolling für interne Links
+            document.querySelectorAll('a.internal-link').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        // Highlight-Effekt
+                        targetElement.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
+                        setTimeout(() => {
+                            targetElement.style.backgroundColor = '';
+                        }, 2000);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

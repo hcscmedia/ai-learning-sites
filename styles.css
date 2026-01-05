@@ -1945,3 +1945,435 @@ footer a:hover {
         font-size: 1rem;
     }
 }
+
+/* ===========================
+   NEWS TABS
+   =========================== */
+.news-tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-xl) 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.tab-btn {
+    background: var(--background);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    background: var(--background-lighter);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: var(--gradient-1);
+    color: white;
+    border-color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-category {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ===========================
+   OFFER/DEAL CARDS
+   =========================== */
+.offers {
+    padding: var(--spacing-xxl) 0;
+}
+
+.offers h3 {
+    font-size: 2rem;
+    margin: var(--spacing-xxl) 0 var(--spacing-xl) 0;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.platform-card.deal {
+    position: relative;
+    overflow: visible;
+}
+
+.deal-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-xl);
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.offer-tips {
+    background: var(--background-light);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xxl);
+    margin-top: var(--spacing-xxl);
+}
+
+.offer-tips h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.tip-card {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.tip-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.tip-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===========================
+   INTERNAL LINKS
+   =========================== */
+.internal-link {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed var(--primary-light);
+    transition: all 0.3s ease;
+}
+
+.internal-link:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.info-box {
+    transition: all 0.3s ease;
+}
+
+.info-box:target {
+    animation: highlightBox 2s ease;
+}
+
+@keyframes highlightBox {
+    0% {
+        background: rgba(99, 102, 241, 0.2);
+        transform: scale(1.02);
+    }
+    100% {
+        background: transparent;
+        transform: scale(1);
+    }
+}
+
+/* ===========================
+   RESPONSIVE - TABS & OFFERS
+   =========================== */
+@media (max-width: 768px) {
+    .news-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+        border-radius: var(--radius-md);
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .deal-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+        right: 10px;
+    }
+}
+
+/* ===========================
+   NEWS TABS
+   =========================== */
+.news-tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-xl) 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.tab-btn {
+    background: var(--background);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    background: var(--background-lighter);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: var(--gradient-1);
+    color: white;
+    border-color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-category {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ===========================
+   OFFER/DEAL CARDS
+   =========================== */
+.offers {
+    padding: var(--spacing-xxl) 0;
+}
+
+.offers h3 {
+    font-size: 2rem;
+    margin: var(--spacing-xxl) 0 var(--spacing-xl) 0;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.platform-card.deal {
+    position: relative;
+    overflow: visible;
+}
+
+.deal-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-xl);
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.offer-tips {
+    background: var(--background-light);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xxl);
+    margin-top: var(--spacing-xxl);
+}
+
+.offer-tips h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.tip-card {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.tip-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.tip-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===========================
+   INTERNAL LINKS
+   =========================== */
+.internal-link {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed var(--primary-light);
+    transition: all 0.3s ease;
+}
+
+.internal-link:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.info-box {
+    transition: all 0.3s ease;
+}
+
+.info-box:target {
+    animation: highlightBox 2s ease;
+}
+
+@keyframes highlightBox {
+    0% {
+        background: rgba(99, 102, 241, 0.2);
+        transform: scale(1.02);
+    }
+    100% {
+        background: transparent;
+        transform: scale(1);
+    }
+}
+
+/* ===========================
+   RESPONSIVE - TABS & OFFERS
+   =========================== */
+@media (max-width: 768px) {
+    .news-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+        border-radius: var(--radius-md);
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .deal-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+        right: 10px;
+    }
+}
